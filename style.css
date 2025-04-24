@@ -1,0 +1,199 @@
+/* Define variables globales para tus colores de marca */
+:root {
+    --astronaut-blue: #02385D;
+    --papaya-orange: #ed6812;
+    --bondi-blue: #0a989d;
+    --quil-grey: #D4D4D4;
+    --lightning-yellow: #FCC01E;
+  
+    /* Colores base adicionales */
+    --background-light: #ffffff; /* Blanco puro para un look más limpio */
+    --text-dark: #333333;       /* Gris oscuro más suave para texto */
+    --text-light: #f8f9fa;      /* Texto claro para fondos oscuros */
+    --link-color: var(--bondi-blue); /* Color para enlaces */
+    --border-color: #e0e0e0;   /* Un gris muy claro para bordes sutiles */
+  }
+  
+  /* Estilos generales para toda la página */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Usamos Inter como fuente principal */
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.7; /* Un poco más de espacio entre líneas */
+  }
+  
+  /* Contenedor principal para centrar contenido */
+  main {
+      max-width: 900px; /* Ancho máximo del contenido principal */
+      margin: 40px auto; /* Espacio arriba/abajo y centrado horizontal */
+      padding: 0 20px; /* Padding lateral para que no pegue a los bordes en pantallas pequeñas */
+  }
+  
+  /* Estilos para las secciones principales */
+  section {
+    padding: 60px 0; /* Espacio interior vertical, sin padding horizontal (ya está en main) */
+    border-bottom: 1px solid var(--border-color); /* Línea divisoria más sutil */
+  }
+  
+  section:last-of-type {
+      border-bottom: none; /* Sin borde en la última sección */
+  }
+  
+  /* Utilidad para centrar texto */
+  .text-center {
+      text-align: center;
+  }
+  
+  /* Estilos para los títulos de sección (H2) */
+  h2 {
+    color: var(--astronaut-blue);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em; /* Un poco más grande */
+    font-weight: 700; /* Más grueso (si la fuente lo permite) */
+  }
+  
+  /* Estilo básico para el header y footer */
+  header, footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--astronaut-blue);
+    color: var(--text-light);
+  }
+  
+  header {
+      min-height: 40px; /* Un poco de altura mínima para el header aunque esté vacío */
+  }
+  
+  footer p {
+      margin: 0;
+      font-size: 0.9em;
+  }
+  
+  /* --- Estilos específicos para la sección #home-about --- */
+  
+  #home-about {
+      border-top: none; /* Quitar borde superior si es la primera */
+      padding-top: 40px; /* Menos padding arriba si no hay header con contenido */
+  }
+  
+  /* Estilo para la imagen de perfil (si se usa) */
+  .profile-pic {
+      width: 150px; /* Tamaño de la imagen */
+      height: 150px;
+      border-radius: 50%; /* Hace la imagen redonda */
+      object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+      margin: 0 auto 30px auto; /* Centrada y con espacio abajo */
+      display: block; /* Necesario para que el margin auto funcione */
+      border: 4px solid var(--bondi-blue); /* Borde con color de acento */
+  }
+  
+  /* Título principal (Tu nombre) */
+  .main-headline {
+      font-size: 3em; /* Tamaño grande */
+      color: var(--astronaut-blue);
+      margin-bottom: 10px; /* Menos espacio debajo */
+      font-weight: 700;
+  }
+  
+  /* Subtítulo / Eslogan */
+  .sub-headline {
+      font-size: 1.3em;
+      color: var(--bondi-blue); /* Usamos el azul Bondi para el subtítulo */
+      margin-bottom: 30px;
+      font-weight: 400; /* Peso normal */
+  }
+  
+  /* Contenedor del texto de la biografía */
+  .bio-text {
+      max-width: 700px; /* Limita el ancho del texto para mejor legibilidad */
+      margin: 0 auto 40px auto; /* Centra el bloque de texto y añade espacio abajo */
+      text-align: left; /* Alinea el texto de la bio a la izquierda dentro de su contenedor */
+  }
+  
+  .bio-text p {
+      margin-bottom: 15px; /* Espacio entre párrafos de la bio */
+  }
+  
+  /* Botón de Llamada a la Acción (CTA) */
+  .cta-button {
+      display: inline-block; /* Permite aplicar padding y margin */
+      background-color: var(--papaya-orange); /* Naranja para el botón principal */
+      color: var(--text-light); /* Texto claro */
+      padding: 12px 25px; /* Espaciado interno */
+      border-radius: 25px; /* Bordes redondeados */
+      text-decoration: none; /* Quita el subrayado del enlace */
+      font-weight: 700;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+      margin-top: 20px; /* Espacio arriba del botón */
+  }
+  
+  .cta-button:hover {
+      background-color: #d15a0e; /* Un naranja un poco más oscuro al pasar el ratón */
+      transform: translateY(-2px); /* Efecto ligero de elevación */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  
+  /* --- Estilos para la sección #portfolio (básico por ahora) --- */
+  .portfolio-grid {
+      /* Añadiremos estilos de grid o flexbox aquí cuando tengamos proyectos */
+      margin-top: 30px;
+  }
+  
+  /* --- Estilos para la sección #contact (básico por ahora) --- */
+  .contact-links {
+      margin-top: 30px;
+      display: flex; /* Coloca los botones uno al lado del otro */
+      justify-content: center; /* Centra los botones */
+      gap: 20px; /* Espacio entre botones */
+      flex-wrap: wrap; /* Permite que los botones pasen abajo si no caben */
+  }
+  
+  .contact-button {
+      display: inline-block;
+      background-color: var(--bondi-blue); /* Azul Bondi para botones de contacto */
+      color: var(--text-light);
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .contact-button:hover {
+      background-color: #087a7f; /* Azul Bondi más oscuro */
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* --- Media Queries para Responsividad (Ajustes para pantallas pequeñas) --- */
+  @media (max-width: 768px) {
+      .main-headline {
+          font-size: 2.5em; /* Reducir tamaño de fuente en móviles */
+      }
+  
+      .sub-headline {
+          font-size: 1.1em;
+      }
+  
+      h2 {
+          font-size: 1.8em;
+      }
+  
+      .bio-text {
+          padding: 0 10px; /* Añadir un poco de padding lateral al texto de la bio en móviles */
+      }
+  
+      section {
+          padding: 40px 0; /* Menos padding vertical en secciones */
+      }
+  
+      main {
+          margin-top: 20px; /* Menos margen superior en main */
+      }
+  }
+  
+  
