@@ -4,9 +4,9 @@
     --bg-color: #ffffff;
     --text-color: #333333;
     --headline-color: #ed6812 ; /* Astronaut Blue */
-    --subheadline-color: #0a989d; /* Bondi Blue */
+    --subheadline-color: #02385D; /* Bondi Blue */
     --accent-color-1: #ed6812 ; /* Papaya Orange */
-    --accent-color-1-darker: #02385D  ; /* Naranja más oscuro para hover */
+    --accent-color-1-darker: #023658  ; /* Naranja más oscuro para hover */
     --accent-color-2: #02385D; /* Bondi Blue */
     --accent-color-2-darker: #023658; /* Bondi Blue más oscuro para hover */
     --card-bg-color: #f8f9fa;
@@ -39,11 +39,11 @@
     --bg-color: #012a4a;
     --text-color: #D4D4D4;
     --headline-color: #FCC01E;
-    --subheadline-color: #87CEEB;
+    --subheadline-color: #0a989d ;
     --accent-color-1: #FCC01E ;
-    --accent-color-1-darker: #D4D4D4 ;
-    --accent-color-2: #20c997;
-    --accent-color-2-darker: #1aa883;
+    --accent-color-1-darker: #0a898d  ;
+    --accent-color-2: #0a989d ;
+    --accent-color-2-darker: #0a898d ;
     --card-bg-color: #02385D;
     --border-color: #02385D;
     --text-light: #f8f9fa;
