@@ -3,12 +3,12 @@
     /* Modo Claro (Light Mode) */
     --bg-color: #ffffff;
     --text-color: #333333;
-    --headline-color: #02385D; /* Astronaut Blue */
+    --headline-color: #ed6812 ; /* Astronaut Blue */
     --subheadline-color: #0a989d; /* Bondi Blue */
-    --accent-color-1: #ed6812; /* Papaya Orange */
-    --accent-color-1-darker: #d15a0e; /* Naranja más oscuro para hover */
-    --accent-color-2: #0a989d; /* Bondi Blue */
-    --accent-color-2-darker: #087a7f; /* Bondi Blue más oscuro para hover */
+    --accent-color-1: #ed6812 ; /* Papaya Orange */
+    --accent-color-1-darker: #02385D  ; /* Naranja más oscuro para hover */
+    --accent-color-2: #02385D; /* Bondi Blue */
+    --accent-color-2-darker: #023658; /* Bondi Blue más oscuro para hover */
     --card-bg-color: #f8f9fa;
     --border-color: #e0e0e0;
     --text-light: #f8f9fa; /* Para texto sobre fondos oscuros (botones, footer) */
@@ -38,10 +38,10 @@
     /* Modo Oscuro (Dark Mode) */
     --bg-color: #012a4a;
     --text-color: #D4D4D4;
-    --headline-color: #ffffff;
+    --headline-color: #FCC01E;
     --subheadline-color: #87CEEB;
-    --accent-color-1: #ff8c42;
-    --accent-color-1-darker: #f07b3f;
+    --accent-color-1: #FCC01E ;
+    --accent-color-1-darker: #D4D4D4 ;
     --accent-color-2: #20c997;
     --accent-color-2-darker: #1aa883;
     --card-bg-color: #02385D;
@@ -364,7 +364,7 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 50px;
-      color: #555; /* Se ajustará por --text-color en dark mode */
+      color: #0f0202; /* Se ajustará por --text-color en dark mode */
       transition: color 0.3s ease;
   }
   .portfolio-grid {
