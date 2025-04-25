@@ -18,305 +18,200 @@
     --button-text-color: #ffffff; /* Texto blanco para botones principales */
     --skill-bg-color: var(--accent-color-2);
     --skill-text-color: var(--button-text-color);
-    --link-color: var(--accent-color-2);
+    --link-color: var(--accent-color-2); /* Color base de enlaces */
+    --nav-link-color: #333333; /* Color enlaces de navegación */
+    --nav-link-hover-color: var(--accent-color-1);
+    --cv-button-bg: var(--accent-color-1);
+    --cv-button-text: #ffffff;
+    --cv-button-hover-bg: var(--accent-color-1-darker);
+    --highlight-color: var(--accent-color-1); /* Color para resaltar texto */
     --embed-bg: #eee;
     --attribution-color: rgba(248, 249, 250, 0.7);
     --attribution-link-color: rgba(248, 249, 250, 0.8);
     --attribution-hover-color: var(--accent-color-1);
-    --theme-toggle-color: #444; /* Color del icono del toggle en modo claro */
+    --theme-toggle-color: #444;
     --theme-toggle-hover-bg: #eee;
+    --mobile-menu-bg: #ffffff;
   }
   
   body.dark-mode {
     /* Modo Oscuro (Dark Mode) */
-    --bg-color: #012a4a; /* Un azul un poco más oscuro que Astronaut Blue */
-    --text-color: #D4D4D4; /* Quil Grey */
-    --headline-color: #ffffff; /* Blanco */
-    --subheadline-color: #87CEEB; /* Un azul cielo claro para contraste */
-    --accent-color-1: #ff8c42; /* Naranja más brillante */
-    --accent-color-1-darker: #f07b3f; /* Naranja brillante más oscuro para hover */
-    --accent-color-2: #20c997; /* Un verde azulado brillante */
-    --accent-color-2-darker: #1aa883; /* Verde azulado brillante más oscuro para hover */
-    --card-bg-color: #02385D; /* Astronaut Blue para las tarjetas */
-    --border-color: #02385D; /* Mismo color que el fondo de tarjeta para bordes sutiles */
-    --text-light: #f8f9fa; /* Sigue siendo útil */
-    --footer-bg-color: #011f36; /* Un azul aún más oscuro para el footer */
+    --bg-color: #012a4a;
+    --text-color: #D4D4D4;
+    --headline-color: #ffffff;
+    --subheadline-color: #87CEEB;
+    --accent-color-1: #ff8c42;
+    --accent-color-1-darker: #f07b3f;
+    --accent-color-2: #20c997;
+    --accent-color-2-darker: #1aa883;
+    --card-bg-color: #02385D;
+    --border-color: #02385D;
+    --text-light: #f8f9fa;
+    --footer-bg-color: #011f36;
     --footer-text-color: #D4D4D4;
     --icon-opacity: 0.9;
     --button-text-color: #012a4a; /* Texto oscuro para botones claros */
     --skill-bg-color: var(--accent-color-2);
     --skill-text-color: #012a4a;
     --link-color: var(--accent-color-2);
+    --nav-link-color: #D4D4D4; /* Color enlaces nav modo oscuro */
+    --nav-link-hover-color: var(--accent-color-1);
+    --cv-button-bg: var(--accent-color-1);
+    --cv-button-text: #012a4a;
+    --cv-button-hover-bg: var(--accent-color-1-darker);
+    --highlight-color: var(--accent-color-1);
     --embed-bg: #333;
     --attribution-color: rgba(212, 212, 212, 0.7);
     --attribution-link-color: rgba(212, 212, 212, 0.8);
     --attribution-hover-color: var(--accent-color-1);
-    --theme-toggle-color: #D4D4D4; /* Color del icono del toggle en modo oscuro */
+    --theme-toggle-color: #D4D4D4;
     --theme-toggle-hover-bg: #02385D;
+    --mobile-menu-bg: #02385D;
   }
   
   /* --- Estilos Generales --- */
+  html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* Ajusta este valor si la altura del header cambia */
+  }
+  
   body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color); /* Usa variable */
-    color: var(--text-color); /* Usa variable */
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.7;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   main {
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 0 auto; /* Quitamos margen superior, el padding de sección lo maneja */
       padding: 0 20px;
   }
-
-  /* --- Estilos Header y Navegación --- */
-
-/* Asegura scroll suave y padding para header fijo */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Ajusta este valor si la altura del header cambia */
-}
-
-header {
-  /* Estilos existentes: background, border, padding, position, top, left, width, z-index, box-sizing, transition */
-  /* Asegúrate de que position sea sticky o fixed */
-  position: sticky;
-  /* Quitamos min-height, la altura la dará el container */
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Espacio entre logo/nav y botones */
-    align-items: center;
-    max-width: 1200px; /* O el ancho que prefieras */
-    margin: 0 auto; /* Centra el contenido del header */
-    height: 65px; /* Altura fija del header */
-    padding: 0 20px; /* Padding interno por si acaso */
-}
-
-/* Logo (Opcional) */
-.logo {
-    font-weight: 700;
-    font-size: 1.5em;
-    color: var(--headline-color);
-    text-decoration: none;
-    margin-right: auto; /* Empuja la navegación a la derecha si hay logo */
-}
-
-
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 25px; /* Espacio entre elementos */
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--nav-link-color); /* Variable definida en :root */
-    font-weight: 500;
-    font-size: 0.95em;
-    padding: 5px 0;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-/* Efecto subrayado opcional */
-.main-nav a:not(.cv-button)::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px; /* Ligeramente debajo del texto */
-    left: 0;
-    background-color: var(--accent-color-1);
-    transition: width 0.3s ease;
-}
-
-.main-nav a:not(.cv-button):hover::after {
-    width: 100%;
-}
-
-.main-nav a:hover {
-    color: var(--nav-link-hover-color); /* Variable definida en :root */
-}
-
-/* Botón Descargar CV */
-.cv-button {
-    background-color: var(--cv-button-bg); /* Variable definida en :root */
-    color: var(--cv-button-text); /* Variable definida en :root */
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.cv-button:hover {
-    background-color: var(--cv-button-hover-bg); /* Variable definida en :root */
-    color: var(--cv-button-text); /* Mantiene color de texto */
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.cv-button:hover::after { /* Evita subrayado en botón */
-    width: 0;
-}
-
-/* Botón Hamburguesa (oculto por defecto) */
-#mobile-menu-toggle {
-    display: none; /* Oculto en escritorio */
-    background: none;
-    border: none;
-    color: var(--headline-color); /* Usa un color visible */
-    cursor: pointer;
-    padding: 5px;
-    margin-left: 15px; /* Espacio respecto al botón de tema */
-}
-#mobile-menu-toggle svg {
-    width: 28px; /* Tamaño icono hamburguesa */
-    height: 28px;
-}
-
-
-/* --- Ajustes para Secciones con Header Fijo --- */
-/* Añade esta clase a tus <section> en el HTML */
-.section-padding {
-    padding-top: 80px; /* Espacio para el header fijo */
-    margin-top: -65px; /* Ajuste negativo para que el ancla quede bien */
-}
-/* Puedes necesitar un ajuste mayor para la primera sección */
-#home-about.section-padding {
-    padding-top: 100px;
-}
-
-
-/* --- Estilos para el Menú Móvil (Dentro de Media Query) --- */
-/* Asegúrate de tener una media query como esta o añade estos estilos dentro de la existente */
-@media (max-width: 992px) {
-    .header-container {
-        padding: 0 15px; /* Ajusta padding si es necesario */
-    }
-
-    .main-nav {
-        display: none; /* Ocultar menú normal */
-        position: absolute;
-        top: 65px; /* Justo debajo del header */
-        left: 0;
-        width: 100%;
-        background-color: var(--mobile-menu-bg); /* Variable definida en :root */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        padding: 10px 0; /* Padding vertical */
-        border-top: 1px solid var(--border-color);
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-        z-index: 999; /* Debajo del header pero encima del contenido */
-    }
-
-    .main-nav.active {
-        display: block; /* Mostrar menú al hacer clic */
-    }
-
-    .main-nav ul {
-        flex-direction: column; /* Apilar verticalmente */
-        align-items: center;
-        gap: 0;
-    }
-
-    .main-nav li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.1); /* Separador muy sutil */
-    }
-     .main-nav li:last-child {
-        border-bottom: none;
-    }
-
-    .main-nav a {
-        display: block;
-        padding: 15px 0; /* Más padding vertical para tocar fácil */
-        width: 100%;
-        color: var(--nav-link-color);
-    }
-     .main-nav a:hover {
-        background-color: rgba(128, 128, 128, 0.05); /* Fondo muy ligero al pasar ratón */
-        color: var(--nav-link-hover-color);
-    }
-    .main-nav a:not(.cv-button)::after {
-        display: none; /* No mostrar subrayado en móvil */
-    }
-    .cv-button { /* Botón CV en menú móvil */
-        display: inline-block;
-        margin: 15px 0;
-        padding: 10px 20px;
-        width: auto;
-    }
-
-    #mobile-menu-toggle {
-        display: block; /* Mostrar botón hamburguesa */
-    }
-
-     /* Ajuste padding secciones en móvil si es necesario */
-    .section-padding {
-        padding-top: 70px;
-        margin-top: -50px; /* Ajustar si la altura del header cambia en móvil */
-    }
-     #home-about.section-padding {
-        padding-top: 80px;
-    }
-}
-
   
-  section {
-    padding: 60px 0;
-    border-bottom: 1px solid var(--border-color); /* Usa variable */
-    transition: border-color 0.3s ease;
+  /* Ajustes para Secciones con Header Fijo */
+  .section-padding {
+      padding-top: 80px; /* Espacio para el header fijo */
+      /* Quitamos margin-top negativo, ajustamos padding */
+      padding-bottom: 60px; /* Padding inferior estándar */
+      border-bottom: 1px solid var(--border-color);
+      transition: border-color 0.3s ease;
   }
-  section:last-of-type { border-bottom: none; }
+  section:last-of-type {
+      border-bottom: none;
+  }
+  /* Padding superior mayor para la primera sección */
+  #home-about.section-padding {
+      padding-top: 100px;
+  }
+  
   .text-center { text-align: center; }
   
-  h1, h2, h3, h4, h5, h6 {
-      transition: color 0.3s ease; /* Transición para títulos */
-  }
-  
-  h2 {
-    color: var(--headline-color); /* Usa variable */
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-    font-weight: 700;
-  }
-  
-  p {
-      transition: color 0.3s ease; /* Transición para párrafos */
-  }
-  
-  a {
-      color: var(--link-color); /* Usa variable */
-      transition: color 0.3s ease;
-  }
-  a:hover {
-      color: var(--accent-color-1); /* Usa variable */
-  }
+  h1, h2, h3, h4, h5, h6 { transition: color 0.3s ease; }
+  h2 { color: var(--headline-color); text-align: center; margin-top: 0; margin-bottom: 40px; font-size: 2em; font-weight: 700; } /* Añadido margin-top: 0 */
+  p { transition: color 0.3s ease; }
+  a { color: var(--link-color); transition: color 0.3s ease; }
+  a:hover { color: var(--accent-color-1); }
   
   
-  /* --- Header y Botón de Tema --- */
+  /* --- Header y Navegación --- */
   header {
-    min-height: 60px;
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
-    padding: 0 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    /* Quitamos padding, lo maneja el container */
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
+    box-sizing: border-box;
     transition: background-color 0.3s ease, border-color 0.3s ease;
   }
+  
+  .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 65px;
+      padding: 0 20px; /* Padding dentro del contenedor */
+  }
+  
+  /* Logo (Opcional) */
+  .logo {
+      font-weight: 700;
+      font-size: 1.5em;
+      color: var(--headline-color);
+      text-decoration: none;
+      margin-right: auto;
+  }
+  
+  /* Navegación Principal */
+  /* .main-nav {} - Regla vacía eliminada */
+  
+  .main-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+  }
+  
+  .main-nav a {
+      text-decoration: none;
+      color: var(--nav-link-color);
+      font-weight: 500;
+      font-size: 0.95em;
+      padding: 5px 0;
+      position: relative;
+      transition: color 0.3s ease;
+  }
+  
+  .main-nav a:not(.cv-button)::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--accent-color-1);
+      transition: width 0.3s ease;
+  }
+  
+  .main-nav a:not(.cv-button):hover::after {
+      width: 100%;
+  }
+  
+  .main-nav a:hover {
+      color: var(--nav-link-hover-color);
+  }
+  
+  /* Botón Descargar CV */
+  .cv-button {
+      background-color: var(--cv-button-bg);
+      color: var(--cv-button-text);
+      padding: 8px 25px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9em;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cv-button:hover {
+      background-color: var(--cv-button-hover-bg);
+      color: var(--cv-button-text);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .cv-button:hover::after { width: 0; }
+  
+  
+  /* Botón de Tema */
+  /* .theme-switch-wrapper {} - Regla vacía eliminada */
   
   #theme-toggle {
       background: none;
@@ -329,6 +224,7 @@ header {
       justify-content: center;
       color: var(--theme-toggle-color);
       transition: background-color 0.2s ease, color 0.3s ease;
+      margin-left: 15px; /* Añadido espacio a la izquierda */
   }
   
   #theme-toggle:hover {
@@ -340,9 +236,24 @@ header {
       height: 24px;
   }
   
+  /* Botón Hamburguesa (oculto por defecto) */
+  #mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--headline-color);
+      cursor: pointer;
+      padding: 5px;
+      margin-left: 10px; /* Espacio reducido */
+  }
+  #mobile-menu-toggle svg {
+      width: 28px;
+      height: 28px;
+  }
+  
   
   /* --- Estilos sección #home-about --- */
-  #home-about { border-top: none; padding-top: 40px; }
+  #home-about { border-top: none; } /* Quitamos padding-top, manejado por .section-padding */
   
   .profile-pic {
       width: 180px;
@@ -351,7 +262,7 @@ header {
       object-fit: cover;
       margin: 0 auto 30px auto;
       display: block;
-      border: 5px solid var(--accent-color-2); /* Usamos accent-2 para el borde */
+      border: 5px solid var(--accent-color-2);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: border-color 0.3s ease;
   }
@@ -374,7 +285,10 @@ header {
       text-align: left;
   }
   .bio-text p { margin-bottom: 15px; }
-  
+  .highlight {
+      color: var(--highlight-color);
+      font-weight: 700;
+  }
   .skills-section {
       margin-top: 50px;
       margin-bottom: 40px;
@@ -402,17 +316,28 @@ header {
       justify-content: center;
       gap: 15px;
   }
-  
-  .skill-item {
-      background-color: var(--skill-bg-color);
-      color: var(--skill-text-color);
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.95em;
-      font-weight: 500;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, color 0.3s ease;
-  }
+  .skills-list li {
+    margin: 0;
+    padding: 0;
+    /* Añade esto si los botones no se alinean bien verticalmente */
+    /* display: flex; */
+}
+
+/* Aseguramos que el LI tenga el fondo y padding */
+.skill-item {
+    background-color: var(--skill-bg-color);
+    /* color: var(--skill-text-color); NO definimos color aquí si el enlace lo va a llevar */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* IMPORTANTE: El color del texto lo manejará el 'a' si existe, o el 'li' si no hay enlace */
+    color: var(--skill-text-color); /* Mantenemos el color aquí por si no hay enlace */
+}
+
+
   
   .cta-button {
       display: inline-block;
@@ -424,10 +349,9 @@ header {
       font-weight: 700;
       transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
       margin-top: 20px;
-      border: none; /* Aseguramos que no tenga borde por defecto */
+      border: none;
   }
   .cta-button:hover {
-      /* Reemplazamos color-mix con una variable predefinida */
       background-color: var(--accent-color-1-darker);
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -436,19 +360,19 @@ header {
   
   /* --- Estilos sección #portfolio --- */
   .portfolio-intro {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    color: #555; /* Un gris un poco más oscuro - Se ajustará por --text-color en dark mode */
-    transition: color 0.3s ease;
-    }
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin-top: 30px;
-    }
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      color: #555; /* Se ajustará por --text-color en dark mode */
+      transition: color 0.3s ease;
+  }
+  .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-top: 30px;
+  }
   .portfolio-item {
       background-color: var(--card-bg-color);
       border: 1px solid var(--border-color);
@@ -464,7 +388,7 @@ header {
       color: var(--headline-color);
       font-size: 1.5em;
   }
-  .portfolio-description { margin-bottom: 25px; } /* Color heredado de body */
+  .portfolio-description { margin-bottom: 25px; }
   
   .powerbi-embed-container {
       position: relative;
@@ -485,12 +409,12 @@ header {
       height: 100%;
       border: none;
   }
-  .powerbi-embed-container p { /* Placeholder text style */
+  .powerbi-embed-container p {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #888; /* Color fijo para placeholder */
+      color: #888;
   }
   
   
@@ -508,7 +432,6 @@ header {
       border: none;
   }
   .contact-button:hover {
-       /* Reemplazamos color-mix con una variable predefinida */
       background-color: var(--accent-color-2-darker);
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -532,16 +455,12 @@ header {
       height: 28px;
       vertical-align: middle;
       opacity: var(--icon-opacity);
-      /* El filtro invert(1) funciona bien para iconos negros sobre fondo oscuro, volviéndolos blancos */
-      /* Si usas iconos ya blancos/claros, este filtro podría no ser necesario o necesitar ajuste */
       filter: brightness(0) invert(1);
       transition: opacity 0.3s ease;
   }
-  /* Ajuste específico para modo oscuro */
   body.dark-mode .social-icon img {
        opacity: 0.9;
-       /* Si tus iconos originales ya son blancos o gris claro, comenta o elimina el filtro */
-       /* filter: none; */
+       /* filter: none; */ /* Comenta o elimina si usas iconos claros */
   }
   
   .social-icon:hover img { opacity: 1; transform: translateY(-2px); }
@@ -561,19 +480,95 @@ header {
   }
   
   /* --- Media Queries --- */
-  @media (max-width: 768px) {
-      main { max-width: 100%; margin-top: 20px; padding: 0 15px; }
+  @media (max-width: 992px) { /* Breakpoint ligeramente mayor para el menú */
+      .header-container {
+          padding: 0 15px;
+      }
+  
+      .main-nav {
+          display: none;
+          position: absolute;
+          top: 65px; /* Asegura que esté debajo del header */
+          left: 0;
+          width: 100%;
+          background-color: var(--mobile-menu-bg);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          padding: 10px 0;
+          border-top: 1px solid var(--border-color);
+          transition: background-color 0.3s ease, border-color 0.3s ease;
+          z-index: 999;
+      }
+  
+      .main-nav.active {
+          display: block;
+      }
+  
+      .main-nav ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 0;
+      }
+  
+      .main-nav li {
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+      }
+       .main-nav li:last-child {
+          border-bottom: none;
+      }
+  
+      .main-nav a {
+          display: block;
+          padding: 15px 0;
+          width: 100%;
+          color: var(--nav-link-color);
+      }
+       .main-nav a:hover {
+          background-color: rgba(128, 128, 128, 0.05);
+          color: var(--nav-link-hover-color);
+      }
+      .main-nav a:not(.cv-button)::after {
+          display: none;
+      }
+      .cv-button {
+          display: inline-block;
+          margin: 15px 0;
+          padding: 10px 20px;
+          width: auto;
+      }
+  
+      #mobile-menu-toggle {
+          display: block;
+      }
+  
+      /* Ajustes generales para pantallas más pequeñas */
+      main { max-width: 100%; margin-top: 0; padding: 0 15px; } /* Quitamos margin-top de main */
       .main-headline { font-size: 2.2em; }
       .sub-headline { font-size: 1.1em; }
       h2 { font-size: 1.8em; }
       .profile-pic { width: 140px; height: 140px; }
       .skills-list { gap: 10px; }
       .skill-item { font-size: 0.9em; padding: 6px 12px; }
-      section { padding: 40px 0; }
+      .section-padding { padding-top: 70px; padding-bottom: 40px; } /* Ajuste padding móvil */
+       #home-about.section-padding { padding-top: 80px; }
+  
       .portfolio-item { padding: 20px; }
       .powerbi-embed-container { padding-bottom: 75%; }
       .social-icons { gap: 20px; }
       .social-icon img { width: 24px; height: 24px; }
-      header { padding: 0 15px; min-height: 50px; }
+      /* No es necesario el ajuste de header aquí si ya está en .header-container */
   }
-    
+  
+  /* Media query adicional para pantallas muy pequeñas si es necesario */
+  @media (max-width: 480px) {
+      .main-headline { font-size: 1.8em; }
+      .sub-headline { font-size: 1em; }
+      h2 { font-size: 1.6em; }
+      .profile-pic { width: 120px; height: 120px; }
+      .skills-list { gap: 8px; }
+      .skill-item { font-size: 0.85em; padding: 5px 10px; }
+      .social-icons { gap: 15px; }
+      .social-icon img { width: 22px; height: 22px; }
+  }
+  
