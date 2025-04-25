@@ -1,146 +1,268 @@
-/* Variables globales de colores (sin cambios) */
+/* --- Variables de Color --- */
 :root {
-    --astronaut-blue: #02385D;
-    --papaya-orange: #ed6812;
-    --bondi-blue: #0a989d;
-    --quil-grey: #D4D4D4;
-    --lightning-yellow: #FCC01E;
-    --background-light: #ffffff;
-    --text-dark: #333333;
-    --text-light: #f8f9fa;
-    --link-color: var(--bondi-blue);
+    /* Modo Claro (Light Mode) */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --headline-color: #02385D; /* Astronaut Blue */
+    --subheadline-color: #0a989d; /* Bondi Blue */
+    --accent-color-1: #ed6812; /* Papaya Orange */
+    --accent-color-2: #0a989d; /* Bondi Blue */
+    --card-bg-color: #f8f9fa;
     --border-color: #e0e0e0;
+    --text-light: #f8f9fa; /* Para texto sobre fondos oscuros (botones, footer) */
+    --footer-bg-color: #02385D;
+    --footer-text-color: #f8f9fa;
+    --icon-opacity: 0.85;
+    --button-text-color: #ffffff; /* Texto blanco para botones principales */
+    --skill-bg-color: var(--accent-color-2);
+    --skill-text-color: var(--button-text-color);
+    --link-color: var(--accent-color-2);
+    --embed-bg: #eee;
+    --attribution-color: rgba(248, 249, 250, 0.7);
+    --attribution-link-color: rgba(248, 249, 250, 0.8);
+    --attribution-hover-color: var(--accent-color-1);
+    --theme-toggle-color: #444; /* Color del icono del toggle en modo claro */
+    --theme-toggle-hover-bg: #eee;
   }
   
-  /* Estilos generales (sin cambios) */
-  body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background-color: var(--background-light); color: var(--text-dark); line-height: 1.7; }
-  main { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-  section { padding: 60px 0; border-bottom: 1px solid var(--border-color); }
+  body.dark-mode {
+    /* Modo Oscuro (Dark Mode) */
+    --bg-color: #012a4a; /* Un azul un poco más oscuro que Astronaut Blue */
+    --text-color: #D4D4D4; /* Quil Grey */
+    --headline-color: #ffffff; /* Blanco */
+    --subheadline-color: #87CEEB; /* Un azul cielo claro para contraste */
+    --accent-color-1: #ff8c42; /* Naranja más brillante */
+    --accent-color-2: #20c997; /* Un verde azulado brillante */
+    --card-bg-color: #02385D; /* Astronaut Blue para las tarjetas */
+    --border-color: #02385D; /* Mismo color que el fondo de tarjeta para bordes sutiles */
+    --text-light: #f8f9fa; /* Sigue siendo útil */
+    --footer-bg-color: #011f36; /* Un azul aún más oscuro para el footer */
+    --footer-text-color: #D4D4D4;
+    --icon-opacity: 0.9;
+    --button-text-color: #012a4a; /* Texto oscuro para botones claros */
+    --skill-bg-color: var(--accent-color-2);
+    --skill-text-color: #012a4a;
+    --link-color: var(--accent-color-2);
+    --embed-bg: #333;
+    --attribution-color: rgba(212, 212, 212, 0.7);
+    --attribution-link-color: rgba(212, 212, 212, 0.8);
+    --attribution-hover-color: var(--accent-color-1);
+    --theme-toggle-color: #D4D4D4; /* Color del icono del toggle en modo oscuro */
+    --theme-toggle-hover-bg: #02385D;
+  }
+  
+  /* --- Estilos Generales --- */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color); /* Usa variable */
+    color: var(--text-color); /* Usa variable */
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  }
+  
+  main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+  }
+  
+  section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color); /* Usa variable */
+    transition: border-color 0.3s ease;
+  }
   section:last-of-type { border-bottom: none; }
   .text-center { text-align: center; }
-  h2 { color: var(--astronaut-blue); text-align: center; margin-bottom: 40px; font-size: 2em; font-weight: 700; }
-  header { min-height: 40px; background-color: var(--astronaut-blue); } /* Añadido fondo al header */
+  
+  h1, h2, h3, h4, h5, h6 {
+      transition: color 0.3s ease; /* Transición para títulos */
+  }
+  
+  h2 {
+    color: var(--headline-color); /* Usa variable */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: 700;
+  }
+  
+  p {
+      transition: color 0.3s ease; /* Transición para párrafos */
+  }
+  
+  a {
+      color: var(--link-color); /* Usa variable */
+      transition: color 0.3s ease;
+  }
+  a:hover {
+      color: var(--accent-color-1); /* Usa variable */
+  }
+  
+  
+  /* --- Header y Botón de Tema --- */
+  header {
+    min-height: 60px; /* Más altura para acomodar el botón */
+    background-color: var(--bg-color); /* Fondo igual al body */
+    border-bottom: 1px solid var(--border-color); /* Borde inferior */
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    align-items: center;
+    position: sticky; /* Header fijo (opcional) */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .theme-switch-wrapper {
+      /* Contenedor del botón */
+  }
+  
+  #theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--theme-toggle-color); /* Color del icono */
+      transition: background-color 0.2s ease, color 0.3s ease;
+  }
+  
+  #theme-toggle:hover {
+      background-color: var(--theme-toggle-hover-bg); /* Fondo sutil al pasar el ratón */
+  }
+  
+  #theme-toggle svg {
+      width: 24px;
+      height: 24px;
+  }
+  
   
   /* --- Estilos sección #home-about --- */
   #home-about { border-top: none; padding-top: 40px; }
+  .profile-pic { /* Sin cambios */ }
+  .main-headline { color: var(--headline-color); /* Usa variable */ }
+  .sub-headline { color: var(--subheadline-color); /* Usa variable */ }
+  .bio-text { /* Sin cambios */ }
+  .bio-text p { /* Sin cambios */ }
   
-  /* Estilo para la imagen de perfil */
-  .profile-pic {
-      width: 180px; /* Un poco más grande */
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 30px auto; /* Centrada y con espacio abajo */
-      display: block;
-      border: 5px solid var(--bondi-blue); /* Borde un poco más grueso */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  }
-  
-  .main-headline { font-size: 3em; color: var(--astronaut-blue); margin-bottom: 10px; font-weight: 700; }
-  .sub-headline { font-size: 1.3em; color: var(--bondi-blue); margin-bottom: 30px; font-weight: 400; }
-  .bio-text { max-width: 700px; margin: 0 auto 40px auto; text-align: left; }
-  .bio-text p { margin-bottom: 15px; }
-  
-  /* Estilos para la Sección de Habilidades Clave */
-  .skills-section {
-      margin-top: 50px; /* Espacio sobre la sección de habilidades */
-      margin-bottom: 40px; /* Espacio debajo antes del botón */
-      padding-top: 30px;
-      border-top: 1px solid var(--border-color); /* Línea separadora sutil */
-      max-width: 800px; /* Ancho máximo para esta sección */
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  .skills-headline {
-      font-size: 1.6em;
-      color: var(--astronaut-blue);
-      margin-bottom: 25px;
-      text-align: center;
-  }
-  
-  .skills-list {
-      list-style: none; /* Quita los puntos de la lista */
-      padding: 0;
-      margin: 0;
-      display: flex; /* Coloca los elementos en línea */
-      flex-wrap: wrap; /* Permite que pasen a la siguiente línea */
-      justify-content: center; /* Centra los elementos */
-      gap: 15px; /* Espacio entre habilidades */
-  }
-  
+  .skills-section { border-top: 1px solid var(--border-color); /* Usa variable */ }
+  .skills-headline { color: var(--headline-color); /* Usa variable */ }
+  .skills-list { /* Sin cambios */ }
   .skill-item {
-      background-color: var(--bondi-blue); /* Fondo azul Bondi */
-      color: var(--text-light); /* Texto claro */
-      padding: 8px 15px; /* Espaciado interno */
-      border-radius: 20px; /* Bordes redondeados tipo "píldora" */
-      font-size: 0.95em;
-      font-weight: 500; /* Un poco más de peso */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: var(--skill-bg-color); /* Usa variable */
+      color: var(--skill-text-color); /* Usa variable */
+      /* Resto sin cambios */
   }
   
-  .cta-button { display: inline-block; background-color: var(--papaya-orange); color: var(--text-light); padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 700; transition: background-color 0.3s ease, transform 0.2s ease; margin-top: 20px; }
-  .cta-button:hover { background-color: #d15a0e; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .cta-button {
+      background-color: var(--accent-color-1); /* Usa variable */
+      color: var(--button-text-color); /* Usa variable */
+      /* Resto sin cambios */
+  }
+  .cta-button:hover {
+      background-color: color-mix(in srgb, var(--accent-color-1), #000 15%); /* Oscurece un poco */
+      /* Resto sin cambios */
+  }
   
-  /* --- Estilos sección #portfolio (sin cambios) --- */
-  .portfolio-intro { max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 50px; color: #555; }
-  .portfolio-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-top: 30px; }
-  .portfolio-item { background-color: #f8f9fa; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); border: 1px solid var(--border-color); text-align: left; }
-  .portfolio-item h3 { margin-top: 0; margin-bottom: 15px; color: var(--astronaut-blue); font-size: 1.5em; }
-  .portfolio-description { margin-bottom: 25px; color: #444; }
-  .powerbi-embed-container { position: relative; padding-bottom: 60%; height: 0; overflow: hidden; max-width: 100%; background: #eee; border-radius: 4px; border: 1px solid var(--border-color); }
-  .powerbi-embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-  .powerbi-embed-container p { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #888; }
   
-  /* --- Estilos sección #contact (sin cambios) --- */
-  .contact-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-  .contact-button { display: inline-block; background-color: var(--bondi-blue); color: var(--text-light); padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: 700; transition: background-color 0.3s ease, transform 0.2s ease; }
-  .contact-button:hover { background-color: #087a7f; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  /* --- Estilos sección #portfolio --- */
+  .portfolio-intro { /* Sin cambios */ }
+  .portfolio-grid { /* Sin cambios */ }
+  .portfolio-item {
+      background-color: var(--card-bg-color); /* Usa variable */
+      border: 1px solid var(--border-color); /* Usa variable */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      /* Resto sin cambios */
+  }
+  .portfolio-item h3 { color: var(--headline-color); /* Usa variable */ }
+  .portfolio-description { /* Sin cambios */ }
+  .powerbi-embed-container {
+      background: var(--embed-bg); /* Usa variable */
+      border: 1px solid var(--border-color); /* Usa variable */
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      /* Resto sin cambios */
+  }
+  .powerbi-embed-container iframe { /* Sin cambios */ }
+  .powerbi-embed-container p { /* Sin cambios */ }
+  
+  
+  /* --- Estilos sección #contact --- */
+  .contact-links { /* Sin cambios */ }
+  .contact-button {
+      background-color: var(--accent-color-2); /* Usa variable */
+      color: var(--button-text-color); /* Usa variable */
+      /* Resto sin cambios */
+  }
+  .contact-button:hover {
+      background-color: color-mix(in srgb, var(--accent-color-2), #000 15%); /* Oscurece un poco */
+      /* Resto sin cambios */
+  }
+  
   
   /* --- Estilos Footer --- */
   footer {
-    padding: 30px 20px; /* Más padding vertical */
+    padding: 30px 20px;
     text-align: center;
-    background-color: var(--astronaut-blue);
-    color: var(--text-light);
-    margin-top: 60px; /* Espacio sobre el footer */
+    background-color: var(--footer-bg-color); /* Usa variable */
+    color: var(--footer-text-color); /* Usa variable */
+    margin-top: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
- /* Estilo para cada icono/enlace social */
-.social-icon {
-    display: inline-block; /* Asegura que el enlace se comporte bien */
-    line-height: 0; /* Evita espacio extra debajo de la imagen */
-    transition: transform 0.2s ease, opacity 0.3s ease; /* Transiciones */
-    }   
-
-.social-icon img {
-    width: 28px; /* Ajusta el tamaño deseado para los iconos */
-    height: 28px; /* Mantén la proporción cuadrada */
-    vertical-align: middle; /* Alinea la imagen verticalmente si es necesario */
-    opacity: 0.85; /* Un poco de opacidad para que no sean tan intensos */
-    }
-
-.social-icon:hover img {
-    opacity: 1; /* Opacidad completa al pasar el ratón */
-    transform: translateY(-2px); /* Ligero efecto de elevación */
-    }
+  .social-icons { margin-bottom: 20px; display: flex; justify-content: center; gap: 25px; }
+  .social-icon { display: inline-block; line-height: 0; transition: transform 0.2s ease, opacity 0.3s ease; }
+  .social-icon img {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+      opacity: var(--icon-opacity); /* Usa variable */
+      filter: brightness(0) invert(1); /* Invierte color para que se vean blancos sobre fondo oscuro */
+  }
+  /* Ajuste específico para modo oscuro si los iconos blancos no se ven bien */
+  body.dark-mode .social-icon img {
+       opacity: 0.9; /* Puedes ajustar la opacidad en modo oscuro si es necesario */
+       /* Si descargaste iconos gris claro, quita o ajusta el filtro: */
+       /* filter: none; */
+  }
   
+  .social-icon:hover img { opacity: 1; transform: translateY(-2px); }
   footer p { margin: 0; font-size: 0.9em; }
   
-  /* --- Media Queries (Ajustes menores) --- */
+  /* Atribución */
+  .attribution {
+      font-size: 0.75em;
+      color: var(--attribution-color); /* Usa variable */
+      margin-top: 15px;
+  }
+  .attribution a {
+      color: var(--attribution-link-color); /* Usa variable */
+      text-decoration: underline;
+  }
+  .attribution a:hover {
+      color: var(--attribution-hover-color); /* Usa variable */
+  }
+  
+  /* --- Media Queries (Ajustes menores para mantener consistencia) --- */
   @media (max-width: 768px) {
-      main { max-width: 100%; margin-top: 20px; padding: 0 15px; } /* Menos padding lateral en main */
-      .main-headline { font-size: 2.2em; } /* Ajustar tamaños */
+      main { max-width: 100%; margin-top: 20px; padding: 0 15px; }
+      .main-headline { font-size: 2.2em; }
       .sub-headline { font-size: 1.1em; }
       h2 { font-size: 1.8em; }
-      .profile-pic { width: 140px; height: 140px; } /* Foto un poco más pequeña */
-      .skills-list { gap: 10px; } /* Menos espacio entre skills */
+      .profile-pic { width: 140px; height: 140px; }
+      .skills-list { gap: 10px; }
       .skill-item { font-size: 0.9em; padding: 6px 12px; }
       section { padding: 40px 0; }
       .portfolio-item { padding: 20px; }
       .powerbi-embed-container { padding-bottom: 75%; }
       .social-icons { gap: 20px; }
-      .social-icon { font-size: 1em; }
+      .social-icon img { width: 24px; height: 24px; } /* Iconos un poco más pequeños en móvil */
+      header { padding: 0 15px; min-height: 50px; } /* Ajuste header móvil */
   }
   
   

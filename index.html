@@ -19,16 +19,23 @@
 <body>
 
     <header>
-        </header>
+        <div class="theme-switch-wrapper">
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                </svg>
+                <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="display: none;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 6.75a5.25 5.25 0 100 10.5 5.25 5.25 0 000-10.5z" />
+                </svg>
+            </button>
+        </div>
+    </header>
 
     <main>
-
         <section id="home-about" class="text-center">
             <img src="Bondi11.png" alt="Foto de Abrahan Chaurio" class="profile-pic">
-
             <h1 class="main-headline">Abrahan Chaurio</h1>
             <p class="sub-headline">Business Intelligence & Data Analysis | Transformando Datos en Decisiones Estratégicas </p>
-
             <div class="bio-text">
                 <p>
                     ¡Hola! Soy Abrahan Chaurio (Abradang). Hace más de 18 años, SQL me mostró el poder de transformar datos en valor, pero mi camino para encontrar el encaje perfecto fue una exploración constante entre la tecnología (Informática) y el negocio (Administración, Emprendimiento).
@@ -40,7 +47,6 @@
                     Hoy, como **"Catalizador Inquebrantable"**, aplico esa pasión y mi experiencia diversa para convertir datos complejos en insights claros y accionables. Combino el rigor técnico con una visión estratégica y una mentalidad de mejora continua. Creo en la acción, en abrir puertas y en generar un impacto que va más allá de los reportes. ¡Bienvenido/a a mi Forja, donde las ideas y los datos toman forma!
                 </p>
             </div>
-
             <div class="skills-section">
                 <h3 class="skills-headline">Áreas de Expertise</h3>
                 <ul class="skills-list">
@@ -53,9 +59,8 @@
                     <li class="skill-item">Resolución de Problemas Críticos</li>
                     <li class="skill-item">Adaptabilidad y Resiliencia</li>
                     <li class="skill-item">Comunicación Estratégica</li>
-                    </ul>
+                </ul>
             </div>
-
             <a href="#portfolio" class="cta-button">Ver mis Proyectos</a>
         </section>
 
@@ -82,35 +87,80 @@
             <p class="text-center">¿Interesado/a en colaborar o saber más? Conectemos.</p>
             <div class="contact-links">
                  <a href="https://www.linkedin.com/in/abrahanchaurio/" target="_blank" rel="noopener noreferrer" class="contact-button">LinkedIn</a>
-                 <a href="mailto:chaurio@abradang.com" class="contact-button">Enviar Email</a> </div>
+                 <a href="mailto:abrahanco@gmail.com" class="contact-button">Enviar Email</a>
+            </div>
         </section>
 
     </main>
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/abrahanchaurio/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                <img src="icons/linkedin1.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.instagram.com/abradang/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                <img src="icons/instagram1.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/Abrahandang/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
-                <img src="icons/facebook1.png" alt="Facebook">
-            </a>
-            <a href="https://www.tiktok.com/@abradang" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Tiktok">
-                <img src="icons/tiktok1.png" alt="TikTok">
-            </a>
-            <a href="https://github.com/abradang" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
-                <img src="icons/github1.png" alt="GitHub">
-            </a>
+            <a href="https://www.linkedin.com/in/abrahanchaurio/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><img src="icons/linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/abradang/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><img src="icons/instagram-icon.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/Abrahandang/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><img src="icons/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@abradang" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Tiktok"><img src="icons/tiktok-icon.png" alt="TikTok"></a>
+            <a href="https://github.com/abradang" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><img src="icons/github-icon.png" alt="GitHub"></a>
         </div>
         <p>&copy; <span id="current-year"></span> Abrahan Chaurio. Todos los derechos reservados.</p>
-        <script>
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        </script>
+        <div class="attribution">
+             Icons made by <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noopener noreferrer">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>
+        </div>
     </footer>
 
-</body>
+    <script>
+        // Actualizar año
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // Lógica del Dark Mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const moonIcon = document.getElementById('theme-icon-moon');
+        const sunIcon = document.getElementById('theme-icon-sun');
+        const currentTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Función para aplicar el tema
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline-block'; // Mostrar sol en modo oscuro
+            } else {
+                document.body.classList.remove('dark-mode');
+                moonIcon.style.display = 'inline-block'; // Mostrar luna en modo claro
+                sunIcon.style.display = 'none';
+            }
+        }
+
+        // Aplicar tema al cargar la página
+        if (currentTheme) {
+            applyTheme(currentTheme);
+        } else if (prefersDarkScheme.matches) {
+            applyTheme('dark'); // Aplicar modo oscuro si es la preferencia del sistema
+        } else {
+             applyTheme('light'); // Modo claro por defecto
+        }
+
+        // Event listener para el botón
+        themeToggle.addEventListener('click', () => {
+            let newTheme;
+            if (document.body.classList.contains('dark-mode')) {
+                newTheme = 'light';
+            } else {
+                newTheme = 'dark';
+            }
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme); // Guardar preferencia
+        });
+
+         // Escuchar cambios en la preferencia del sistema (opcional, pero bueno)
+        prefersDarkScheme.addEventListener('change', (e) => {
+            // Solo cambiar si no hay preferencia guardada explícitamente por el usuario
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+    </script>
+
+</body>
 </html>
