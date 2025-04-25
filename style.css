@@ -106,26 +106,24 @@
     margin-top: 60px; /* Espacio sobre el footer */
   }
   
-  /* Contenedor de iconos sociales */
-  .social-icons {
-      margin-bottom: 20px; /* Espacio entre iconos y texto de copyright */
-      display: flex;
-      justify-content: center;
-      gap: 25px; /* Espacio entre iconos */
-  }
-  
-  /* Estilo para cada icono/enlace social */
-  .social-icon {
-      color: var(--text-light); /* Color del texto/icono */
-      text-decoration: none; /* Quita subrayado */
-      font-size: 1.1em; /* Tamaño del texto (ajustar si usamos iconos SVG) */
-      transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .social-icon:hover {
-      color: var(--papaya-orange); /* Cambia a naranja al pasar el ratón */
-      transform: translateY(-2px); /* Ligero efecto de elevación */
-  }
+ /* Estilo para cada icono/enlace social */
+.social-icon {
+    display: inline-block; /* Asegura que el enlace se comporte bien */
+    line-height: 0; /* Evita espacio extra debajo de la imagen */
+    transition: transform 0.2s ease, opacity 0.3s ease; /* Transiciones */
+    }   
+
+.social-icon img {
+    width: 28px; /* Ajusta el tamaño deseado para los iconos */
+    height: 28px; /* Mantén la proporción cuadrada */
+    vertical-align: middle; /* Alinea la imagen verticalmente si es necesario */
+    opacity: 0.85; /* Un poco de opacidad para que no sean tan intensos */
+    }
+
+.social-icon:hover img {
+    opacity: 1; /* Opacidad completa al pasar el ratón */
+    transform: translateY(-2px); /* Ligero efecto de elevación */
+    }
   
   footer p { margin: 0; font-size: 0.9em; }
   
