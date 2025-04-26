@@ -132,7 +132,6 @@
   
   .header-container {
       display: flex;
-      justify-content: space-between; /* Mantenemos espacio entre bloques */
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
@@ -204,6 +203,89 @@ body.dark-mode .header-social-icons .social-icon img.icon-light {
       margin-right: auto;
   }
   
+/* --- Estilos Logo Header --- */
+
+.logo-link {
+    display: inline-block; /* Comportamiento de bloque en línea */
+    line-height: 0; /* Evita espacio vertical extra */
+    /* Quitamos margen auto, la posición la da el flex container */
+    /* margin-right: auto; */
+    flex-shrink: 0; /* Evita que el logo se encoja si falta espacio */
+    height: 40px; /* Fija la altura del contenedor del logo */
+}
+
+/* Estilo base para ambas imágenes del logo */
+.logo-image {
+    height: 100%; /* Ocupa la altura del contenedor .logo-link */
+    width: auto; /* Mantiene la proporción */
+    /* vertical-align: middle; - Línea eliminada */
+    display: block; /* Asegura que solo uno se muestre a la vez */
+}
+
+/* Ocultar logo de modo oscuro por defecto (en modo claro) */
+.logo-image.icon-dark {
+    display: none;
+}
+/* Mostrar logo de modo claro por defecto */
+.logo-image.icon-light {
+    display: block;
+}
+
+/* Mostrar logo de modo oscuro y ocultar el claro EN MODO OSCURO */
+body.dark-mode .logo-image.icon-dark {
+    display: block;
+}
+body.dark-mode .logo-image.icon-light {
+    display: none;
+}
+
+/* --- Ajustes Layout Header --- */
+
+.header-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente todos los items */
+    /* justify-content: space-between; Asegúrate que esta línea NO esté o esté comentada */
+    gap: 25px; /* Espacio entre logo, nav, iconos, etc. Ajusta según necesites */
+    /* ... resto de estilos .header-container ... */
+}
+
+/* Empujar todo lo que no sea logo y nav a la derecha */
+/* Seleccionamos el contenedor de iconos sociales como punto de referencia */
+.header-social-icons {
+     margin-left: auto; /* Empuja este y los siguientes elementos a la derecha */
+     /* ... resto de estilos .header-social-icons ... */
+     display: flex; /* Aseguramos flex aquí también */
+     align-items: center;
+     gap: 18px;
+}
+
+
+/* --- Ajustes en Media Queries --- */
+@media (max-width: 992px) {
+    .header-container {
+        gap: 15px; /* Menos gap en móvil */
+    }
+    .logo-link {
+        height: 35px; /* Logo más pequeño */
+        margin-right: 0; /* Quitamos margen extra si lo hubiera */
+    }
+    /* El .main-nav y .header-social-icons ya se ocultan en tu CSS */
+
+    /* Empujar botones de acción y hamburguesa a la derecha */
+    .header-actions {
+         margin-left: auto; /* Empuja los botones de idioma/tema */
+    }
+     #mobile-menu-toggle {
+        margin-left: 10px; /* Espacio respecto a los botones de acción */
+        /* display: block; Ya debería estar en tu media query */
+        /* order: X; No es necesario si .header-actions tiene margin-left: auto */
+    }
+}
+
+/* --- Fin Ajustes Layout Header --- */
+
+
+
   /* Navegación Principal */
   /* .main-nav {} - Regla vacía eliminada */
   
