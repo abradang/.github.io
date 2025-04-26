@@ -132,13 +132,68 @@
   
   .header-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Mantenemos espacio entre bloques */
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
       height: 65px;
       padding: 0 20px; /* Padding dentro del contenedor */
   }
+  /* Contenedor específico para iconos sociales en header */
+  .header-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* Espacio */
+    margin: 0 25px; /* Margen */
+}
+
+/* Estilo base para CADA icono DENTRO del header */
+.header-social-icons .social-icon img {
+    width: 24px; /* Tamaño consistente */
+    height: 24px;
+    display: block; /* Para asegurar que solo uno se muestre */
+    transition: transform 0.2s ease, opacity 0.3s ease;
+    opacity: 0.85;
+    filter: none; /* Sin filtro por defecto (para modo claro) */
+}
+
+/* Ocultar icono de modo oscuro por defecto (en modo claro) */
+.header-social-icons .social-icon img.icon-dark {
+    display: none;
+}
+/* Mostrar icono de modo claro por defecto */
+.header-social-icons .social-icon img.icon-light {
+    display: block;
+}
+
+/* Mostrar icono de modo oscuro y ocultar el claro EN MODO OSCURO */
+body.dark-mode .header-social-icons .social-icon img.icon-dark {
+    display: block;
+    opacity: 0.9;
+    filter: brightness(0) invert(1); /* Hacemos blancos los iconos dark */
+}
+body.dark-mode .header-social-icons .social-icon img.icon-light {
+    display: none;
+}
+
+/* Hover para iconos en header */
+.header-social-icons .social-icon:hover img {
+    opacity: 1;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+    /* ... otros estilos móviles ... */
+
+    /* Ocultar iconos sociales del header en móvil (demasiado lleno) */
+    .header-social-icons {
+        display: none;
+    }
+
+   
+}
   
   /* Logo (Opcional) */
   .logo {
@@ -289,53 +344,123 @@
       color: var(--highlight-color);
       font-weight: 700;
   }
-  .skills-section {
-      margin-top: 50px;
-      margin-bottom: 40px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border-color);
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      transition: border-color 0.3s ease;
-  }
-  
-  .skills-headline {
-      font-size: 1.6em;
-      color: var(--headline-color);
-      margin-bottom: 25px;
-      text-align: center;
-  }
-  
-  .skills-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-  }
-  .skills-list li {
-    margin: 0;
-    padding: 0;
-    /* Añade esto si los botones no se alinean bien verticalmente */
-    /* display: flex; */
+/* --- Estilos Sección Habilidades (9 Tarjetas Detalladas) --- */
+
+.skills-section {
+    /* Mantener estilos existentes (margin, padding-top, border-top, max-width, etc.) */
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: border-color 0.3s ease;
+    text-align: center;
 }
 
-/* Aseguramos que el LI tenga el fondo y padding */
-.skill-item {
-    background-color: var(--skill-bg-color);
-    /* color: var(--skill-text-color); NO definimos color aquí si el enlace lo va a llevar */
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.95em;
-    font-weight: 500;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* IMPORTANTE: El color del texto lo manejará el 'a' si existe, o el 'li' si no hay enlace */
-    color: var(--skill-text-color); /* Mantenemos el color aquí por si no hay enlace */
+.skills-headline {
+    font-size: 2em;
+    color: var(--headline-color);
+    margin-bottom: 10px;
+    font-weight: 700;
 }
+
+.skills-subheadline {
+    font-size: 1.2em;
+    color: var(--subheadline-color);
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+/* Contenedor de las tarjetas */
+.skills-cards-container {
+    display: grid;
+    /* 3 columnas en escritorio */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Espacio entre tarjetas */
+    text-align: left;
+}
+
+/* Estilo base de la tarjeta (aplicado al div interno) */
+.skill-card-detailed {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
+    height: 100%; /* Para que todas las tarjetas en una fila tengan la misma altura */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el enlace que envuelve la tarjeta */
+a.skill-card-link {
+    text-decoration: none;
+    color: inherit; /* Hereda color del texto normal */
+    display: block; /* Hace que el enlace ocupe el espacio del grid */
+    height: 100%; /* Asegura que el enlace ocupe toda la altura de la tarjeta */
+}
+
+/* Efecto hover UNIFICADO para todas las tarjetas (sean enlace o no) */
+/* Se aplica al div interno para consistencia visual */
+.skill-card-detailed:hover {
+    transform: translateY(-5px); /* Elevación */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+    border-color: var(--accent-color-1); /* Borde naranja para TODAS al pasar el ratón */
+}
+
+
+.skill-card-detailed h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    color: var(--headline-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.skill-card-detailed p {
+    font-size: 0.9em;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 0; /* Quitamos margen inferior para que h4 y p estén juntos */
+    flex-grow: 1; /* Ocupa espacio disponible */
+    transition: color 0.3s ease;
+}
+
+/* --- Media Queries para la Cuadrícula de Habilidades Detalladas --- */
+@media (max-width: 992px) {
+    .skills-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 20px;
+    }
+     .skills-section {
+         max-width: 90%;
+    }
+     .skill-card-detailed h4 { font-size: 1.15em; }
+     .skill-card-detailed p { font-size: 0.88em; }
+}
+
+@media (max-width: 600px) {
+     .skills-cards-container {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        gap: 15px;
+    }
+     .skill-card-detailed {
+        padding: 20px;
+    }
+    .skills-headline { font-size: 1.8em; }
+    .skills-subheadline { font-size: 1.1em; margin-bottom: 40px;}
+    .skill-card-detailed h4 { font-size: 1.1em; }
+    .skill-card-detailed p { font-size: 0.85em; }
+}
+
+/* --- Asegúrate de que estos estilos estén ANTES de la media query general @media (max-width: 992px) que afecta a .main-nav, etc. o intégralos correctamente --- */
+
+
 
 
   
@@ -447,6 +572,51 @@
     margin-top: 60px;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  footer .social-icons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Enlace de icono en footer */
+footer .social-icon {
+    display: inline-block;
+    line-height: 0; /* Evita espacio extra */
+}
+
+/* Imagen de icono en footer */
+footer .social-icon img {
+    width: 28px; /* Tamaño para footer */
+    height: 28px;
+    vertical-align: middle;
+    opacity: var(--icon-opacity); /* Usa variable de opacidad del footer */
+    filter: brightness(0) invert(1); /* SIEMPRE blancos en footer */
+    transition: opacity 0.3s ease, transform 0.2s ease; /* Transiciones */
+}
+
+/* Hover para iconos del FOOTER */
+footer .social-icon:hover img {
+    opacity: 1;
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Ajuste dark mode footer (puede no ser necesario si ya son blancos) */
+body.dark-mode footer .social-icon img {
+     opacity: 0.9; /* Ajusta opacidad si quieres */
+     /* filter: brightness(0) invert(1); Ya está aplicado arriba */
+}
+
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+    /* Ocultar iconos sociales del header en móvil */
+    .header-social-icons {
+        display: none;
+    }
+    /* ... resto de media query ... */
+}
   
   .social-icons { margin-bottom: 20px; display: flex; justify-content: center; gap: 25px; }
   .social-icon { display: inline-block; line-height: 0; transition: transform 0.2s ease, opacity 0.3s ease; }
