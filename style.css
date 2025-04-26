@@ -40,10 +40,10 @@
     --text-color: #D4D4D4;
     --headline-color: #FCC01E;
     --subheadline-color: #0a989d ;
-    --accent-color-1: #FCC01E ;
-    --accent-color-1-darker: #0a898d  ;
-    --accent-color-2: #FCC01E ;
-    --accent-color-2-darker: #0a898d ;
+    --accent-color-1: #FCC01E   ;
+    --accent-color-1-darker: #FCC01E;
+    --accent-color-2: #D4D4D4  ;
+    --accent-color-2-darker: #d4d4d4c7;
     --card-bg-color: #02385D;
     --border-color: #02385D;
     --text-light: #f8f9fa;
