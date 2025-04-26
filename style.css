@@ -571,4 +571,67 @@
       .social-icons { gap: 15px; }
       .social-icon img { width: 22px; height: 22px; }
   }
-  
+  /* --- Header y Navegación --- */
+/* ... estilos existentes para header, header-container, main-nav ... */
+
+/* Contenedor para botones de acción (Idioma, Tema) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre botón de idioma y botón de tema */
+}
+
+/* Botón de Idioma */
+#language-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px; /* Padding alrededor de la bandera */
+    border-radius: 50%;
+    display: flex; /* Para centrar la imagen si es necesario */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+#language-toggle img {
+    display: block; /* Evita espacio extra debajo de la imagen */
+    width: 24px; /* Tamaño de la bandera */
+    height: auto; /* Mantiene proporción */
+    border-radius: 3px; /* Bordes ligeramente redondeados para la bandera */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+#language-toggle:hover {
+    background-color: var(--theme-toggle-hover-bg); /* Reutilizamos el hover del botón de tema */
+}
+
+/* Ajustes para el botón de tema (puede que necesite menos margen ahora) */
+#theme-toggle {
+    margin-left: 0; /* Quitamos margen si ahora está dentro de .header-actions con gap */
+}
+
+
+/* --- Media Queries --- */
+@media (max-width: 992px) {
+    /* ... otros estilos móviles ... */
+
+    .header-actions {
+        /* Mantenemos los botones visibles en móvil */
+        gap: 5px; /* Reducimos espacio en móvil */
+    }
+
+     #language-toggle img {
+        width: 22px; /* Banderas un poco más pequeñas */
+     }
+     #theme-toggle svg {
+         width: 22px; /* Iconos de tema un poco más pequeños */
+         height: 22px;
+     }
+
+    /* Ajustamos el botón de menú móvil si es necesario */
+    #mobile-menu-toggle {
+        margin-left: 5px;
+    }
+}
+
