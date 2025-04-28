@@ -14,6 +14,31 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      /* Estilo simple para los enlaces dentro del bio - puedes ajustarlo en style.css */
+      .bio-link {
+        font-weight: bold;
+        text-decoration: underline;
+        /* color: var(--link-color); /* Asegúrate de tener una variable CSS o define un color */
+        margin: 0 0.25em; /* Espacio alrededor de los enlaces */
+      }
+      .bio-text h4 { /* Espaciado para el subtítulo 'Cómo aporto valor' */
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-size: 1.1em; /* Ligeramente más grande que el párrafo */
+      }
+      .bio-text p:last-child { /* Más espacio antes del CTA final */
+         margin-top: 1.5em;
+      }
+      .bio-text p[data-lang-es^="🛠️"], /* Añadir un poco de sangría a los puntos de valor */
+      .bio-text p[data-lang-es^="📊"],
+      .bio-text p[data-lang-es^="🚀"],
+      .bio-text p[data-lang-es^="🧠"] {
+          margin-left: 1em;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+      }
+    </style>
 </head>
 
 <body>
@@ -59,15 +84,15 @@
              </div>
 
              <div class="header-actions">
-                <button id="language-toggle" aria-label="Change language / Cambiar idioma">
-                    <img id="lang-flag" src="icons/flags/flag-es.png" alt="Español" width="24" height="24">
-                </button>
-                <div class="theme-switch-wrapper">
-                    <button id="theme-toggle" aria-label="Cambiar tema" aria-live="polite">
-                        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"> <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /> </svg>
-                        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="display: none;"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 6.75a5.25 5.25 0 100 10.5 5.25 5.25 0 000-10.5z" /> </svg>
-                    </button>
-                </div>
+                 <button id="language-toggle" aria-label="Change language / Cambiar idioma">
+                     <img id="lang-flag" src="icons/flags/flag-es.png" alt="Español" width="24" height="24">
+                 </button>
+                 <div class="theme-switch-wrapper">
+                     <button id="theme-toggle" aria-label="Cambiar tema" aria-live="polite">
+                         <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24"> <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /> </svg>
+                         <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24" style="display: none;"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 6.75a5.25 5.25 0 100 10.5 5.25 5.25 0 000-10.5z" /> </svg>
+                     </button>
+                 </div>
              </div>
 
              <button id="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav-ul">
@@ -83,14 +108,31 @@
             <img src="Bondi11.png" alt="Foto de Abrahan Chaurio" class="profile-pic">
             <h1 class="main-headline" data-lang-es="Abrahan Chaurio" data-lang-en="Abrahan Chaurio">Abrahan Chaurio</h1>
             <p class="sub-headline" data-lang-es="Business Intelligence & Data Analyst | Transformando Datos en Decisiones Estratégicas" data-lang-en="Business Intelligence & Data Analyst | Turning Data into Strategic Decisions">Business Intelligence & Data Analyst | Transformando Datos en Decisiones Estratégicas </p>
+
             <div class="bio-text">
-                 <p data-lang-es="¡Hola! Soy Abrahan Chaurio. Hace más de 18 años, SQL me mostró el poder de transformar datos en valor, pero mi camino para encontrar el encaje perfecto fue una exploración constante entre la tecnología (Informática) y el negocio (Administración, Emprendimiento)." data-lang-en="Hi! I'm Abrahan Chaurio. Over 18 years ago, SQL showed me the power of transforming data into value, but my path to finding the perfect fit was a constant exploration between technology (Computer Science) and business (Administration, Entrepreneurship).">¡Hola! Soy Abrahan Chaurio. Hace más de 18 años, SQL me mostró el poder de transformar datos en valor, pero mi camino para encontrar el encaje perfecto fue una exploración constante entre la tecnología (Informática) y el negocio (Administración, Emprendimiento).</p>
-                 <p data-lang-es="El momento decisivo llegó durante una crisis de datos: tras días de análisis exhaustivo, no solo recuperamos información crítica (y millones para el negocio), sino que entendí mi verdadera vocación. El Business Intelligence era el puente que buscaba: donde la tecnología sirve al negocio, los datos cuentan historias y los problemas se convierten en oportunidades de mejora." data-lang-en="The defining moment came during a data crisis: after days of exhaustive analysis, we not only recovered critical information (and millions for the business), but I understood my true calling. Business Intelligence was the bridge I was looking for: where technology serves the business, data tells stories, and problems become opportunities for improvement.">El momento decisivo llegó durante una crisis de datos: tras días de análisis exhaustivo, no solo recuperamos información crítica (y millones para el negocio), sino que entendí mi verdadera vocación. El Business Intelligence era el puente que buscaba: donde la tecnología sirve al negocio, los datos cuentan historias y los problemas se convierten en oportunidades de mejora.</p>
-                 <p data-lang-es="Hoy, como <strong class='highlight'>Catalizador Inquebrantable</strong>, aplico esa pasión y mi experiencia diversa para convertir datos complejos en insights claros y accionables. Combino el rigor técnico con una visión estratégica y una mentalidad de mejora continua. Creo en la acción, en abrir puertas y en generar un impacto que va más allá de los reportes. ¡Bienvenido/a a mi Forja, donde las ideas y los datos toman forma!" data-lang-en="Today, as an <strong class='highlight'>Unshakeable Catalyst</strong>, I apply that passion and my diverse experience to turn complex data into clear, actionable insights. I combine technical rigor with a strategic vision and a continuous improvement mindset. I believe in action, in opening doors, and in generating impact that goes beyond reports. Welcome to my Forge, where ideas and data take shape!">Hoy, como <strong class="highlight">Catalizador Inquebrantable</strong>, aplico esa pasión y mi experiencia diversa para convertir datos complejos en insights claros y accionables. Combino el rigor técnico con una visión estratégica y una mentalidad de mejora continua. Creo en la acción, en abrir puertas y en generar un impacto que va más allá de los reportes. ¡Bienvenido/a a mi Forja, donde las ideas y los datos toman forma!</p>
+                <p data-lang-es="¡Hola! Soy Abrahán Chaurio." data-lang-en="Hi! I'm Abrahán Chaurio.">¡Hola! Soy Abrahán Chaurio.</p>
+
+                <p data-lang-es="Soy la persona a la que llamas cuando los datos fallan y necesitas una solución... para ayer." data-lang-en="I'm the person you call when data breaks and you needed a solution... yesterday.">Soy la persona a la que llamas cuando los datos fallan y necesitas una solución... para ayer.</p>
+
+                <p data-lang-es="Con más de 8 años de experiencia transformando datos en valor dentro de sectores dinámicos como telecomunicaciones, e-commerce y fintech, he aprendido a detener el caos antes de que frene decisiones críticas. Mi pasión es construir puentes sólidos entre la tecnología y el negocio, combinando análisis riguroso con visión estratégica para lograr resultados tangibles." data-lang-en="With over 8 years of experience transforming data into value within dynamic sectors like telecommunications, e-commerce, and fintech, I've learned how to stop chaos before it halts critical decisions. My passion is building solid bridges between technology and business, combining rigorous analysis with strategic vision to achieve tangible results.">Con más de 8 años de experiencia transformando datos en valor dentro de sectores dinámicos como telecomunicaciones, e-commerce y fintech, he aprendido a detener el caos antes de que frene decisiones críticas. Mi pasión es construir puentes sólidos entre la tecnología y el negocio, combinando análisis riguroso con visión estratégica para lograr resultados tangibles.</p>
+
+                <h4 data-lang-es="Cómo aporto valor:" data-lang-en="How I add value:">Cómo aporto valor:</h4>
+
+                <p data-lang-es="🛠️ Depuro pipelines SQL que alimentan reportes críticos — porque nadie debería dudar de sus números." data-lang-en="🛠️ I debug SQL pipelines that feed critical reports — because no one should doubt their numbers.">🛠️ Depuro pipelines SQL que alimentan reportes críticos — porque nadie debería dudar de sus números.</p>
+                <p data-lang-es="📊 Construyo dashboards estratégicos en Power BI, con modelos de datos eficientes (DAX) y visualizaciones claras y accionables." data-lang-en="📊 I build strategic dashboards in Power BI, with efficient data models (DAX) and clear, actionable visualizations.">📊 Construyo dashboards estratégicos en Power BI, con modelos de datos eficientes (DAX) y visualizaciones claras y accionables.</p>
+                <p data-lang-es="🚀 Optimizo procesos utilizando SQL, Power Query y automatización avanzada en Excel, enfocándome en la eficiencia real." data-lang-en="🚀 I optimize processes using SQL, Power Query, and advanced Excel automation, focusing on real efficiency.">🚀 Optimizo procesos utilizando SQL, Power Query y automatización avanzada en Excel, enfocándome en la eficiencia real.</p>
+                <p data-lang-es="🧠 Resuelvo inconsistencias de datos que impactan directamente en el negocio, no solo en las métricas superficiales." data-lang-en="🧠 I resolve data inconsistencies that directly impact the business, not just surface metrics.">🧠 Resuelvo inconsistencias de datos que impactan directamente en el negocio, no solo en las métricas superficiales.</p>
+
+                <p data-lang-es="Hoy, como profesional de Business Intelligence, busco colaborar con equipos donde la calidad y la fiabilidad de los datos son prioridad estratégica. Creo firmemente en la acción decidida, la mejora continua y el poder de transformar datos complejos en insights que impulsan decisiones inteligentes." data-lang-en="Today, as a Business Intelligence professional, I am looking to collaborate with teams where data quality and reliability are strategic priorities. I firmly believe in decisive action, continuous improvement, and the power of transforming complex data into insights that drive intelligent decisions.">Hoy, como profesional de Business Intelligence, busco colaborar con equipos donde la calidad y la fiabilidad de los datos son prioridad estratégica. Creo firmemente en la acción decidida, la mejora continua y el poder de transformar datos complejos en insights que impulsan decisiones inteligentes.</p>
+
+                <p>
+                  <span data-lang-es="Bienvenido/a a mi espacio." data-lang-en="Welcome to my space.">Bienvenido/a a mi espacio.</span>
+                  <a href="#portfolio" class="bio-link" data-lang-es="Explora mis Proyectos" data-lang-en="Explore my Projects">Explora mis Proyectos</a>
+                  <span data-lang-es="para ver ejemplos concretos o" data-lang-en="to see concrete examples or">para ver ejemplos concretos o</span>
+                  <a href="#contact" class="bio-link" data-lang-es="Hablemos" data-lang-en="Let's Talk">Hablemos</a>
+                  <span data-lang-es="sobre cómo puedo ayudarte a convertir tus datos en resultados." data-lang-en="about how I can help you turn your data into results.">sobre cómo puedo ayudarte a convertir tus datos en resultados.</span>
+                </p>
             </div>
-
-
-            
             <div class="skills-section">
                 <h3 class="skills-headline" data-lang-es="Mis Habilidades" data-lang-en="My Skills">Mis Habilidades</h3>
                 <p class="skills-subheadline" data-lang-es="Herramientas y Enfoques Clave" data-lang-en="Key Tools & Approaches">Herramientas y Enfoques Clave</p>
@@ -155,11 +197,10 @@
                     </div>
 
                 </div> </div>
-            
-            
-                
-            
-            
+
+
+
+
         </section>
 
         <section id="portfolio" class="section-padding">
@@ -186,8 +227,8 @@
                     The analysis is based on the Makeover Monday 2023/W9 dataset and highlights interesting patterns in the variety of caffeine concentrations available in the market.">Esta visualización explora y compara la cantidad de cafeína en diferentes bebidas vendidas por reconocidas cadenas de café. El objetivo es ofrecer una perspectiva clara sobre cuáles opciones contienen mayores niveles de cafeína, ayudando a los consumidores a tomar decisiones informadas según sus necesidades energéticas o preferencias personales.
                     El análisis se basa en el conjunto de datos de Makeover Monday 2023/W9 y revela patrones interesantes sobre la variedad de contenidos de cafeína disponibles en el mercado.</p>
                     <div class="tableau-embed-container">
-                        <p><strong><div class='tableauPlaceholder' id='viz1745674809511' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FirstDashboard_16780279621940&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FirstDashboard_16780279621940&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FirstDashboard_16780279621940&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1745674809511');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></strong></p>
-                        </div>
+                        <p><strong><div class='tableauPlaceholder' id='viz1745674809511' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FirstDashboard_16780279621940&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FirstDashboard_16780279621940&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FirstDashboard_16780279621940&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                 <script type='text/javascript'>                    var divElement = document.getElementById('viz1745674809511');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></strong></p>
+                         </div>
                 </div>
 
                 <div class="portfolio-item">
@@ -197,8 +238,8 @@
                     The goal is to offer a clear and accessible overview of the evolution of Germany’s meat industry, based on the Makeover Monday 2023/W10 dataset">Esta visualización ofrece un análisis detallado de la producción de carne en Alemania a lo largo de más de dos décadas. Se presentan tendencias históricas desde el año 2000 hasta 2022, permitiendo identificar patrones de crecimiento, disminución y cambios en el consumo o la producción de diferentes tipos de carne.
                     El objetivo es facilitar una comprensión rápida y visual de la evolución de la industria cárnica alemana, basándose en el conjunto de datos de Makeover Monday 2023/W10.</p>
                     <div class="tableau-embed-container">
-                        <p><strong><div class='tableauPlaceholder' id='viz1745676776255' style='position: relative'><noscript><a href='#'><img alt='MakeOverMonday2023W10 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MakeOverMonday2023W10&#47;MakeOverMonday2023W10&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MakeOverMonday2023W10&#47;MakeOverMonday2023W10' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MakeOverMonday2023W10&#47;MakeOverMonday2023W10&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1745676776255');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></strong></p>
-                        </div>
+                        <p><strong><div class='tableauPlaceholder' id='viz1745676776255' style='position: relative'><noscript><a href='#'><img alt='MakeOverMonday2023W10 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MakeOverMonday2023W10&#47;MakeOverMonday2023W10&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MakeOverMonday2023W10&#47;MakeOverMonday2023W10' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;MakeOverMonday2023W10&#47;MakeOverMonday2023W10&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /></object></div>                 <script type='text/javascript'>                    var divElement = document.getElementById('viz1745676776255');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></strong></p>
+                         </div>
                 </div>
 
                  </div> </section>
@@ -225,19 +266,13 @@
             <a href="mailto:abrahanco@gmail.com" class="social-icon" aria-label="Gmail"><img src="icons/gmail-icon.png" alt="Gmail"></a>
         </div>
         <p data-lang-es="&copy; {year} Abrahan Chaurio. Todos los derechos reservados." data-lang-en="&copy; {year} Abrahan Chaurio. All rights reserved.">&copy; <span id="current-year"></span> Abrahan Chaurio. Todos los derechos reservados.</p>
-        </footer>
+         </footer>
 
     <script>
         // --- Lógica Común ---
         const body = document.body;
-        const currentYearSpan = document.getElementById('current-year');
+        const currentYearSpan = document.getElementById('current-year'); // Este ahora se busca dentro de applyLanguage
         const htmlElement = document.documentElement; // Referencia a <html>
-
-        // --- Actualizar año ---
-        if (currentYearSpan) {
-            // Esta parte se maneja ahora dentro de applyLanguage para que el año no desaparezca al cambiar idioma
-            // currentYearSpan.textContent = new Date().getFullYear();
-        }
 
         // --- Lógica del Dark Mode ---
         const themeToggle = document.getElementById('theme-toggle');
@@ -308,7 +343,7 @@
         // Diccionario de traducciones del título (alternativa a data-lang en <title>)
         const pageTitles = {
              es: 'Abrahan Chaurio - Business Intelligence & Data Analyst',
-             en: 'Abrahan Chaurio - Business Intelligence & Data Analyst' // ** TRADUCIR **
+             en: 'Abrahan Chaurio - Business Intelligence & Data Analyst' // Mismo título en ambos idiomas
         };
 
 
@@ -320,23 +355,28 @@
             elementsToTranslate.forEach(el => {
                 const text = el.getAttribute(`data-lang-${lang}`);
                 if (text !== null) { // Verificar que el atributo exista para el idioma actual
-                     // Manejar copyright
+                     // Manejar copyright (el único que usa {year})
                     if (el.dataset.langEs && el.dataset.langEs.includes('{year}')) {
-                         el.innerHTML = text.replace('{year}', `<span id="current-year">${new Date().getFullYear()}</span>`);
-                    } else if (el.tagName === 'INPUT' || el.tagName === 'BUTTON' || el.hasAttribute('value')) {
-                         // Priorizar 'value' si existe, sino textContent
-                         if (el.hasAttribute('value')) {
-                             el.value = text;
-                         } else {
-                             el.textContent = text;
-                         }
+                         // Asegurarse que el span para el año exista o crearlo si es necesario
+                        let yearSpan = el.querySelector('#current-year');
+                        if (!yearSpan) {
+                            // Reemplazar {year} con el span y el año actual
+                            el.innerHTML = text.replace('{year}', `<span id="current-year">${new Date().getFullYear()}</span>`);
+                        } else {
+                             // Si ya existe, solo actualizar el texto alrededor
+                             el.innerHTML = text.replace('{year}', `<span id="current-year">${yearSpan.textContent || new Date().getFullYear()}</span>`);
+                        }
+                    } else if (el.tagName === 'INPUT' || (el.tagName === 'BUTTON' && el.hasAttribute('value'))) {
+                         el.value = text; // Para inputs o botones con 'value'
+                    } else if (el.tagName === 'IMG') {
+                         el.alt = text; // Para el alt de las imágenes (como la bandera)
                     } else {
-                        // Usar innerHTML si el texto original contiene HTML (como <strong>)
-                        // Comprobamos si el *atributo* data-lang contiene HTML
-                         if (text.includes('<strong') || text.includes('<b') || text.includes('<i') || text.includes('<em')) {
-                            el.innerHTML = text;
+                         // Usar innerHTML si el texto del atributo data-lang contiene HTML (como <a> o <strong>)
+                         // O si el elemento mismo es un contenedor que podría tener HTML interno (como el párrafo final con enlaces)
+                         if (text.includes('<') || el.children.length > 0 || el.classList.contains('bio-link')) {
+                            el.innerHTML = text; // Permite renderizar HTML como los enlaces <a>
                          } else {
-                            el.textContent = text;
+                            el.textContent = text; // Para texto simple
                          }
                     }
                 } else {
@@ -348,7 +388,7 @@
             // Actualizar bandera
             if (langFlag && flagPaths[lang]) {
                 langFlag.src = flagPaths[lang];
-                langFlag.alt = lang === 'es' ? 'Español' : 'English';
+                langFlag.alt = lang === 'es' ? 'Español' : 'English'; // Actualiza el alt de la bandera
             } else if (langFlag) {
                  console.error("Elemento de bandera o ruta de bandera no encontrada para:", lang);
             }
@@ -371,7 +411,7 @@
 
         // Aplicar idioma y LUEGO tema (para que el año se renderice correctamente)
         applyLanguage(initialLang);
-        applyTheme(initialTheme);
+        applyTheme(initialTheme); // Asegúrate que applyTheme se llame después de applyLanguage
 
 
         if (languageToggle) {
