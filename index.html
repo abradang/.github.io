@@ -7,6 +7,7 @@
           data-lang-en="Abrahán Chaurio – Functional Analyst | Finance, Processes & Technology">
     Abrahán Chaurio – Analista Funcional | Finanzas, Procesos y Tecnología
   </title>
+  <meta name="description" content="Analista Funcional (Business Analyst) enfocado en finanzas, procesos y ROI. Requisitos, BPMN, UAT, validaciones con SQL y coordinación negocio-TI. Navarra (ES) · Remoto/Híbrido.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +24,33 @@
     .value-bullets { margin-left: 1em; margin-top: .5em; margin-bottom: .5em; }
     .cta-row { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; margin-top:1rem; }
     .chip { display:inline-block; padding:.35rem .6rem; border-radius:999px; border:1px solid var(--border-color, #e5e7eb); font-size:.9rem; }
+    .skills-cards-container a.skill-card-link { text-decoration: none; }
   </style>
-</head>
-<body>
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abrahán Chaurio",
+    "url": "https://abradang.com",
+    "jobTitle": "Analista Funcional / Business Analyst",
+    "knowsAbout": ["BPMN","UAT","Procesos financieros","ROI","SQL","Jira","Confluence","Power BI","Elicitación de requisitos"],
+    "sameAs": [
+      "https://www.linkedin.com/in/abrahanchaurio",
+      "https://github.com/abradang",
+      "https://www.instagram.com/abradang/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Navarra",
+      "addressCountry": "ES"
+    }
+  }
+  </script>
+</head>
+
+<body>
 <header>
   <div class="header-container">
     <a href="#" class="logo-link" aria-label="Abradang - Inicio">
@@ -39,7 +63,7 @@
         <li><a href="#home-about" data-lang-es="Acerca de mí" data-lang-en="About Me">Acerca de mí</a></li>
         <li><a href="#value" data-lang-es="Qué hago" data-lang-en="What I Do">Qué hago</a></li>
         <li><a href="#cases" data-lang-es="Casos" data-lang-en="Cases">Casos</a></li>
-        <li><a href="/bi" data-lang-es="Portafolio BI" data-lang-en="BI Portfolio">Portafolio BI</a></li>
+        <li><a href="#courses" data-lang-es="Cursos" data-lang-en="Courses">Cursos</a></li>
         <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
         <li><a href="Abrahan_Chaurio_CV.pdf" data-lang-es="Descargar CV" data-lang-en="Download CV">Descargar CV</a></li>
       </ul>
@@ -97,6 +121,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
     </button>
+
   </div>
 </header>
 
@@ -106,7 +131,6 @@
     <img src="Bondi11.png" alt="Foto de Abrahán Chaurio" class="profile-pic">
     <h1 class="main-headline" data-lang-es="Abrahán Chaurio" data-lang-en="Abrahán Chaurio">Abrahán Chaurio</h1>
 
-    <!-- SUB-HEADLINE ALINEADO A ANALISTA FUNCIONAL -->
     <p class="sub-headline"
        data-lang-es="Analista Funcional | Finanzas, Procesos & Tecnología Conectada.<br>Conecto negocio y TI para convertir requisitos en valor, eficiencia y ROI."
        data-lang-en="Functional Analyst | Finance, Processes & Connected Technology.<br>I bridge Business & IT to turn requirements into value, efficiency and ROI.">
@@ -161,12 +185,6 @@
         <span class="chip" data-lang-es="Process Mining (Celonis – en progreso)" data-lang-en="Process Mining (Celonis – learning)">Process Mining (Celonis – en progreso)</span>
         <span class="chip" data-lang-es="Connected Planning (Anaplan – en progreso)" data-lang-en="Connected Planning (Anaplan – learning)">Connected Planning (Anaplan – en progreso)</span>
       </div>
-
-      <p>
-        <span data-lang-es="¿Quieres ver dashboards y visualizaciones?" data-lang-en="Want to see dashboards & dataviz?">¿Quieres ver dashboards y visualizaciones?</span>
-        <a href="/bi" class="bio-link" data-lang-es="Visita mi Portafolio BI" data-lang-en="Visit my BI Portfolio">Visita mi Portafolio BI</a>
-        <span data-lang-es="— es mi soporte técnico como analista funcional." data-lang-en="— that’s my technical support as a functional analyst.">— es mi soporte técnico como analista funcional.</span>
-      </p>
     </div>
   </section>
 
@@ -217,7 +235,7 @@
     </div>
   </section>
 
-  <!-- CASOS (SIN EMBEBER BI AQUÍ) -->
+  <!-- CASOS (SIN EMBEBER BI) -->
   <section id="cases" class="section-padding">
     <h2 data-lang-es="Casos & notas" data-lang-en="Cases & Notes">Casos & notas</h2>
     <p class="bio-text" data-lang-es="Algunos ejemplos (resumen público por confidencialidad):"
@@ -232,9 +250,9 @@
             Telecom (Atos, 2020–2024): Mediación, tasación y facturación
         </h3>
         <p class="portfolio-description"
-           data-lang-es="Levantamiento de requisitos, documentación clara, diseño de UAT y validaciones SQL. Impacto: reducción de reprocesos y mejora de la calidad de datos con efecto directo en facturación."
-           data-lang-en="Requirements elicitation, clear documentation, UAT design and SQL validations. Impact: fewer reprocesses and improved data quality with direct effect on billing.">
-           Levantamiento de requisitos, documentación clara, diseño de UAT y validaciones SQL. Impacto: reducción de reprocesos y mejora de la calidad de datos con efecto directo en facturación.
+           data-lang-es="Levantamiento de requisitos, documentación, UAT y validaciones SQL. Impacto: reducción de reprocesos y mejora de la calidad de datos con efecto directo en facturación."
+           data-lang-en="Requirements elicitation, documentation, UAT and SQL validations. Impact: fewer reprocesses and improved data quality with direct effect on billing.">
+           Levantamiento de requisitos, documentación, UAT y validaciones SQL. Impacto: reducción de reprocesos y mejora de la calidad de datos con efecto directo en facturación.
         </p>
       </div>
 
@@ -251,16 +269,83 @@
       </div>
 
       <div class="portfolio-item">
-        <h3 data-lang-es="Soporte BI (casos internos): validaciones y reporting para decisión"
-            data-lang-en="BI support (internal cases): validations & decision reporting">
-            Soporte BI (casos internos): validaciones y reporting para decisión
+        <h3 data-lang-es="Soporte funcional con BI: validaciones y reporting para decisión"
+            data-lang-en="Functional support with BI: validations & decision reporting">
+            Soporte funcional con BI: validaciones y reporting para decisión
         </h3>
         <p class="portfolio-description"
-           data-lang-es="Ejemplos de uso de SQL/Power BI para checks de calidad y métricas clave, alineados al proceso. Ver más en ‘Portafolio BI’."
-           data-lang-en="Examples of SQL/Power BI used for quality checks and key metrics, aligned to process. See more in ‘BI Portfolio’.">
-           Ejemplos de uso de SQL/Power BI para checks de calidad y métricas clave, alineados al proceso. Ver más en ‘Portafolio BI’.
+           data-lang-es="Uso de SQL/Power BI para checks de calidad y métricas clave alineadas al proceso. Detalle ampliado disponible a solicitud."
+           data-lang-en="Use of SQL/Power BI for quality checks and key metrics aligned to process. Extended details upon request.">
+           Uso de SQL/Power BI para checks de calidad y métricas clave alineadas al proceso. Detalle ampliado disponible a solicitud.
         </p>
-        <p><a class="bio-link" href="/bi" data-lang-es="Ir al Portafolio BI →" data-lang-en="Go to BI Portfolio →">Ir al Portafolio BI →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS & CERTIFICACIONES -->
+  <section id="courses" class="section-padding">
+    <h2 data-lang-es="Cursos & Certificaciones" data-lang-en="Courses & Certifications">Cursos & Certificaciones</h2>
+    <p class="bio-text"
+       data-lang-es="Formación continua orientada a resultados. Selección relevante:"
+       data-lang-en="Continuous, results-oriented learning. Selected highlights:">
+       Formación continua orientada a resultados. Selección relevante:
+    </p>
+
+    <div class="skills-cards-container">
+      <a href="https://platzi.com/p/Abrahanco/curso/2359-business-intelligence/diploma/detalle/" target="_blank" rel="noopener" class="skill-card-link">
+        <div class="skill-card-detailed">
+          <h4 data-lang-es="Business Intelligence" data-lang-en="Business Intelligence">Business Intelligence</h4>
+          <p data-lang-es="Metodologías para convertir datos en inteligencia accionable." data-lang-en="Methodologies to turn data into actionable intelligence.">
+            Metodologías para convertir datos en inteligencia accionable.
+          </p>
+        </div>
+      </a>
+
+      <a href="https://platzi.com/p/Abrahanco/curso/10200-powerbi/diploma/detalle/" target="_blank" rel="noopener" class="skill-card-link">
+        <div class="skill-card-detailed">
+          <h4>Microsoft Power BI</h4>
+          <p data-lang-es="ETL (Power Query), modelado (DAX) y visualización ejecutiva." data-lang-en="ETL (Power Query), modeling (DAX) and executive viz.">
+            ETL (Power Query), modelado (DAX) y visualización ejecutiva.
+          </p>
+        </div>
+      </a>
+
+      <a href="https://platzi.com/p/Abrahanco/curso/11324-dbsql/diploma/detalle/" target="_blank" rel="noopener" class="skill-card-link">
+        <div class="skill-card-detailed">
+          <h4>SQL</h4>
+          <p data-lang-es="Extracción, optimización y validaciones para calidad de datos." data-lang-en="Extraction, optimization and validations for data quality.">
+            Extracción, optimización y validaciones para calidad de datos.
+          </p>
+        </div>
+      </a>
+
+      <a href="https://platzi.com/p/Abrahanco/curso/4822-excel-avanzado-datos/diploma/detalle/" target="_blank" rel="noopener" class="skill-card-link">
+        <div class="skill-card-detailed">
+          <h4 data-lang-es="Excel Avanzado" data-lang-en="Advanced Excel">Excel Avanzado</h4>
+          <p data-lang-es="Automatización y análisis avanzado orientado a negocio." data-lang-en="Automation and advanced business-oriented analysis.">
+            Automatización y análisis avanzado orientado a negocio.
+          </p>
+        </div>
+      </a>
+
+      <div class="skill-card-detailed">
+        <h4 data-lang-es="Scrum & Métodos Ágiles" data-lang-en="Scrum & Agile Methods">Scrum & Métodos Ágiles</h4>
+        <p data-lang-es="Trabajo por iteraciones, foco en valor y colaboración." data-lang-en="Iterative delivery, value focus and collaboration.">
+          Trabajo por iteraciones, foco en valor y colaboración.
+        </p>
+      </div>
+
+      <!-- Más cursos en Platzi -->
+      <div class="skill-card-detailed">
+        <h4 data-lang-es="Más cursos y certificados" data-lang-en="More courses & certificates">Más cursos y certificados</h4>
+        <p data-lang-es="Explora todo mi historial de cursos y certificados en Platzi:"
+           data-lang-en="Explore my full courses and certificates history at Platzi:">
+           Explora todo mi historial de cursos y certificados en Platzi:
+        </p>
+        <p data-lang-es='Más en: <a href="https://platzi.com/p/Abrahanco" target="_blank" rel="noopener">platzi.com/p/Abrahanco</a>'
+           data-lang-en='More at: <a href="https://platzi.com/p/Abrahanco" target="_blank" rel="noopener">platzi.com/p/Abrahanco</a>'>
+           Más en: <a href="https://platzi.com/p/Abrahanco" target="_blank" rel="noopener">platzi.com/p/Abrahanco</a>
+        </p>
       </div>
     </div>
   </section>
@@ -302,70 +387,15 @@
 </footer>
 
 <script>
-  // --- Lógica Común ---
+  // --- referencias comunes ---
   const body = document.body;
-  const htmlElement = document.documentElement;
+  const htmlEl = document.documentElement;
 
-  // --- Tema oscuro/claro ---
-  const themeToggle = document.getElementById('theme-toggle');
-  const moonIcon = document.getElementById('theme-icon-moon');
-  const sunIcon = document.getElementById('theme-icon-sun');
-
-  function applyTheme(theme) {
-    body.classList.remove('dark-mode', 'light-mode');
-    if (theme === 'dark') {
-      body.classList.add('dark-mode');
-      if (moonIcon) moonIcon.style.display = 'none';
-      if (sunIcon) sunIcon.style.display = 'inline-block';
-    } else {
-      body.classList.add('light-mode');
-      if (moonIcon) moonIcon.style.display = 'inline-block';
-      if (sunIcon) sunIcon.style.display = 'none';
-    }
-  }
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  let initialTheme = savedTheme ? savedTheme : (prefersDark ? 'dark' : 'light');
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
-      applyTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  }
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) { applyTheme(e.matches ? 'dark' : 'light'); }
-  });
-
-  // --- Menú móvil ---
-  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-  const mainNav = document.querySelector('.main-nav');
-  if (mobileMenuToggle && mainNav) {
-    mobileMenuToggle.addEventListener('click', () => {
-      const isActive = mainNav.classList.toggle('active');
-      mobileMenuToggle.setAttribute('aria-expanded', isActive);
-    });
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (mainNav.classList.contains('active')) {
-          mainNav.classList.remove('active');
-          mobileMenuToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  }
-
-  // --- Cambio de idioma ---
+  // --------- IDIOMA ----------
   const languageToggle = document.getElementById('language-toggle');
   const langFlag = document.getElementById('lang-flag');
 
-  const flagPaths = {
-    es: 'icons/flags/flag-es.png',
-    en: 'icons/flags/flag-us.png'
-  };
-
+  const flagPaths = { es: 'icons/flags/flag-es.png', en: 'icons/flags/flag-us.png' };
   const pageTitles = {
     es: 'Abrahán Chaurio – Analista Funcional | Finanzas, Procesos y Tecnología',
     en: 'Abrahán Chaurio – Functional Analyst | Finance, Processes & Technology'
@@ -373,45 +403,102 @@
 
   function applyLanguage(lang) {
     if (!['es','en'].includes(lang)) lang = 'es';
-    htmlElement.setAttribute('lang', lang);
-    const elementsToTranslate = document.querySelectorAll('[data-lang-es], [data-lang-en]');
-    elementsToTranslate.forEach(el => {
+    htmlEl.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-lang-es],[data-lang-en]').forEach(el => {
       const text = el.getAttribute(`data-lang-${lang}`);
-      if (text !== null) {
-        if (el.dataset.langEs && el.dataset.langEs.includes('{year}')) {
-          let yearSpan = el.querySelector('#current-year');
-          if (!yearSpan) {
-            el.innerHTML = text.replace('{year}', `<span id="current-year">${new Date().getFullYear()}</span>`);
-          } else {
-            el.innerHTML = text.replace('{year}', `<span id="current-year">${yearSpan.textContent || new Date().getFullYear()}</span>`);
-          }
-        } else if (el.tagName === 'INPUT' || (el.tagName === 'BUTTON' && el.hasAttribute('value'))) {
-          el.value = text;
-        } else if (el.tagName === 'IMG') {
-          el.alt = text;
-        } else {
-          if (text.includes('<') || el.children.length > 0 || el.classList.contains('bio-link')) {
-            el.innerHTML = text;
-          } else {
-            el.textContent = text;
-          }
-        }
+      if (text == null) return;
+
+      // caso especial: copyright con {year}
+      const hasYearToken = (el.dataset.langEs && el.dataset.langEs.includes('{year')) ||
+                           (el.dataset.langEn && el.dataset.langEn.includes('{year'));
+      if (hasYearToken) {
+        el.innerHTML = text.replace('{year}', `<span id="current-year">${new Date().getFullYear()}</span>`);
+        return;
       }
+
+      // inputs/botones
+      if (el.tagName === 'INPUT' || (el.tagName === 'BUTTON' && el.hasAttribute('value'))) {
+        el.value = text; return;
+      }
+      // imágenes (alt)
+      if (el.tagName === 'IMG') { el.alt = text; return; }
+
+      // si trae HTML o el elemento tiene hijos -> innerHTML, si no -> textContent
+      if (text.includes('<') || el.children.length > 0) el.innerHTML = text;
+      else el.textContent = text;
     });
+
     if (langFlag && flagPaths[lang]) {
       langFlag.src = flagPaths[lang];
-      langFlag.alt = lang === 'es' ? 'Español' : 'English';
+      langFlag.alt = (lang === 'es') ? 'Español' : 'English';
     }
-    const titleElement = document.querySelector('title');
-    if (titleElement && pageTitles[lang]) titleElement.textContent = pageTitles[lang];
+    const titleEl = document.querySelector('title');
+    if (titleEl && pageTitles[lang]) titleEl.textContent = pageTitles[lang];
+
     localStorage.setItem('language', lang);
   }
 
   const savedLanguage = localStorage.getItem('language');
-  const browserLang = navigator.language.split('-')[0];
-  let initialLang = savedLanguage ? savedLanguage : (['es','en'].includes(browserLang) ? browserLang : 'es');
+  const browserLang = (navigator.language || 'es').split('-')[0];
+  const initialLang = savedLanguage || (['es','en'].includes(browserLang) ? browserLang : 'es');
 
-  // Render
+  if (languageToggle) {
+    languageToggle.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('lang') || 'es';
+      applyLanguage(current === 'es' ? 'en' : 'es');
+    });
+  }
+
+  // --------- TEMA ----------
+  const themeToggle = document.getElementById('theme-toggle');
+  const moonIcon = document.getElementById('theme-icon-moon');
+  const sunIcon  = document.getElementById('theme-icon-sun');
+
+  function applyTheme(theme) {
+    body.classList.remove('dark-mode','light-mode');
+    if (theme === 'dark') {
+      body.classList.add('dark-mode');
+      if (moonIcon) moonIcon.style.display = 'none';
+      if (sunIcon)  sunIcon.style.display  = 'inline-block';
+    } else {
+      body.classList.add('light-mode');
+      if (moonIcon) moonIcon.style.display = 'inline-block';
+      if (sunIcon)  sunIcon.style.display  = 'none';
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      applyTheme(body.classList.contains('dark-mode') ? 'light' : 'dark');
+    });
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
+  });
+
+  // --------- MENÚ MÓVIL ----------
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+      const isActive = mainNav.classList.toggle('active');
+      mobileMenuToggle.setAttribute('aria-expanded', isActive);
+    });
+    mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      if (mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+    }));
+  }
+
+  // --------- RENDER INICIAL (orden importa) ----------
   applyLanguage(initialLang);
   applyTheme(initialTheme);
 </script>
